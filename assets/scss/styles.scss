@@ -2,7 +2,6 @@
 @import "glide.theme";
 @import "header";
 body {
-
     margin: 0;
     background-color: #F0F0F0;
     background-image: url(../img/logonice2.png);
@@ -14,11 +13,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-      
-
         .glide__slides{
             margin: 0;
         }
     }
-
 }
