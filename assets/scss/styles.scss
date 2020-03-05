@@ -4,11 +4,15 @@
 body {
     margin: 0;
     background-color: #F0F0F0;
+    background-image: url(../img/logonice2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:contain;
+    background-position: center bottom;
     &>main{
         display: flex;
         flex-direction: column;
         align-items: center;
-
         .glide__slides{
             margin: 0;
         }
