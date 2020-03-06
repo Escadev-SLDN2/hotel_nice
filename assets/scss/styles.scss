@@ -1,6 +1,7 @@
 @import "glide.core";
 @import "glide.theme";
 @import "header";
+@import "carousel";
 body {
     margin: 0;
     background-color: #F0F0F0;
@@ -9,12 +10,4 @@ body {
     background-attachment: fixed;
     background-size:contain;
     background-position: center bottom;
-    &>main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .glide__slides{
-            margin: 0;
-        }
-    }
 }
