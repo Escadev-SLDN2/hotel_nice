@@ -1,13 +1,6 @@
-@import "glide.core";
-@import "glide.theme";
-@import "header";
-@import "carousel";
-body {
-    margin: 0;
-    background-color: #F0F0F0;
-    background-image: url(../img/logonice2.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size:contain;
-    background-position: center bottom;
-}
+@import "carousel/glide.core";
+@import "carousel/glide.theme";
+
+@import "variables/fonts";
+
+@import "layout";

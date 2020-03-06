@@ -1,12 +1,8 @@
-body {
-    main{
-        .carousel-container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .glide__slides{
-                margin: 0;
-            }
-        }
+.carousel-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .glide__slides{
+        margin: 0;
     }
 }
