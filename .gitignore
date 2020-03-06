@@ -5,3 +5,5 @@ php/config.conf
 .workspace
 .codelite
 *.code-workspace
+*.min.css
+*.min.css.map
