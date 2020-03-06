@@ -9,17 +9,19 @@
 }
 
 .img_h {
-    width: 35%;
+    flex-grow: 1;
     border: solid $color-sky;
     border-radius: 4px;
     background-color: rgba(70, 155, 186, 0.7);
     height: 200px;
+    margin: 0 20px;
 }
 
 .info_h {
-    width: 60%;
+    flex-grow: 2;
     border: solid $color-sand;
     border-radius: 4px;
     background-color: rgba(255, 174, 68, 0.7);
     height: 200px;
+    margin: 0 20px;
 }
