@@ -11,7 +11,7 @@
     display: block;
     top: 50%;
     z-index: 2;
-    color: white;
+    color: $white;
     text-transform: uppercase;
     padding: 9px 12px;
     background-color: transparent;
@@ -26,7 +26,7 @@
     line-height: 1;
 
     &:focus { outline: none; }
-    &:hover { border-color: white; }
+    &:hover { border-color: $white; }
 
     &#{$sm}left {
       left: 2em;
@@ -70,12 +70,12 @@
 
     &:hover,
     &:focus {
-      border: 2px solid white;
+      border: 2px solid $white;
       background-color: rgba(255, 255, 255, 0.5);
     }
 
     &#{$sm}active {
-      background-color: white;
+      background-color: $white;
     }
   }
 
