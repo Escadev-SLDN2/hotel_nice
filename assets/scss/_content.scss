@@ -1,6 +1,6 @@
 .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 50px 100px;  
 }
 
@@ -9,17 +9,31 @@
 }
 
 .img_h {
-    width: 35%;
+    flex-grow: 1;
     border: solid $color-sky;
     border-radius: 4px;
-    background-color: rgba(70, 155, 186, 0.7);
+    background-color: $color-sky_t;
     height: 200px;
+    margin: 0 2vh;
 }
 
 .info_h {
-    width: 60%;
+    flex-grow: 2;
     border: solid $color-sand;
     border-radius: 4px;
-    background-color: rgba(255, 174, 68, 0.7);
+    background-color: $color-sand_t;
     height: 200px;
+    margin: 0 2vh;
+}
+
+.contact_h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: solid $color-cloud;
+    border-radius: 4px;
+    background-color: $color-cloud_t;
+    height: 200px;
+    margin: 0 2vh;
 }
