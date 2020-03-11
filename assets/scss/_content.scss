@@ -1,27 +1,52 @@
 .row {
     display: flex;
     justify-content: space-evenly;
-    margin: 50px 100px;
+    flex-wrap: wrap;
+    margin: 0 2vh;
     &.reverse {
         flex-direction: row-reverse;
     }
-    .h {
-        border-radius: 4px;
-        height: 200px;
-        margin: 0 2vh;
+    .block {
+        border-radius: 0.8vw;
+        min-height: 10vh;
+        margin: 2vh 2vh;
+        padding: 4vh 0;
+        flex-shrink: 0;
 
         &.sm {
+            flex-grow: 0;
+        }
+
+        &.md{
             flex-grow: 1;
         }
 
         &.lg {
             flex-grow: 2;
         }
+
+        &.centeredV{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1,h2,h3,h4,h5,h6{
+                align-self: flex-start;
+                margin-left: 4vh;
+                margin-right: 8vh;              
+            }
+        }
+        &.centeredH{
+            justify-content: center;
+
+            p{
+                margin: 0;
+            }
+        }
+
         &.color-sky {
             border: solid $color-sky;
             background-color: $color-sky_t;
         }
-
         &.color-sand {
             border: solid $color-sand;
             background-color: $color-sand_t;
@@ -33,12 +58,15 @@
         &.color-ocean {
             border: solid $color-ocean;
             background-color: $color-ocean_t;
-        }
+            color: $white;
 
-        .contact {
-            width: 20vw;
-            margin-left: auto;
-            margin-right: auto;
         }
+        
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
     }
 }
