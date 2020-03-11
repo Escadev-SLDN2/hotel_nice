@@ -11,15 +11,17 @@
         min-height: 10vh;
         margin: 2vh 2vh;
         padding: 4vh 0;
-        flex-shrink: 0;
-       
+        overflow: hidden;
+        position: relative;
         &.sm {
             flex-grow: 0;
+            flex-shrink: 0;
         }
 
         &.md{
             flex-grow: 1;
             flex-basis: 0;
+            flex-shrink: 0;
         }
 
         &.lg {
@@ -70,5 +72,13 @@
             padding: 0;
         }
         
+        img{
+            
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: scale(0.33) translate(-150%,-150%);
+        }
     }
+
 }
