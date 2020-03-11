@@ -12,17 +12,18 @@
         margin: 2vh 2vh;
         padding: 4vh 0;
         flex-shrink: 0;
-
         &.sm {
             flex-grow: 0;
         }
 
         &.md{
             flex-grow: 1;
+            flex-basis: 0;
         }
 
         &.lg {
             flex-grow: 2;
+            flex-basis: 0;
         }
 
         &.centeredV{
