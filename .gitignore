@@ -1,0 +1,9 @@
+
+php/config.conf
+.vscode
+.idea
+.workspace
+.codelite
+*.code-workspace
+*.min.css
+*.min.css.map

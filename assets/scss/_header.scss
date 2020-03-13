@@ -1,0 +1,39 @@
+body {
+    &>header{
+    color: $white;
+    display: flex;
+    align-items: center;
+    height: 110px;
+    background-color: $color_cloud;
+    font-size: 2em;
+
+        a{
+            max-height: 90px;
+        }
+        
+        img{
+            margin-left: 20px;
+        }
+
+        h1 {
+            font-family: $font-title;
+            margin-left: 20px;
+            a {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+
+        p{
+            margin-left: auto;
+            margin-right: 20px;
+            a {
+                color: $color_sky;
+                text-decoration: none;
+                &:hover, &:visited {
+                    color: $color_ocean;
+                }
+            }
+        }
+    }
+}

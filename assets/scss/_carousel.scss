@@ -1,0 +1,11 @@
+@import "carousel/glide.core";
+@import "carousel/glide.theme";
+
+.carousel-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .glide__slides{
+        margin: 0;
+    }
+}
