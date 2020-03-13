@@ -6,6 +6,7 @@
     &.reverse {
         flex-direction: row-reverse;
     }
+
     .block {
         border-radius: 0.8vw;
         min-height: 10vh;
@@ -17,13 +18,11 @@
             flex-grow: 0;
             flex-shrink: 0;
         }
-
         &.md{
             flex-grow: 1;
             flex-basis: 0;
             flex-shrink: 0;
         }
-
         &.lg {
             flex-grow: 2;
             flex-basis: 0;
@@ -80,5 +79,4 @@
             transform: scale(0.33) translate(-150%,-150%);
         }
     }
-
 }
