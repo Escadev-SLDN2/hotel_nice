@@ -29,6 +29,11 @@
     <header>
         <a href="index.html"><img src="../assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
         <h1><a href="index.html">Administration</a></h1>
+        <nav>
+            <a href="">test</a>
+            <a href="">test</a>
+            <a href="">test</a>
+        </nav>
     </header>
     <main>
         <nav class="side-nav">
