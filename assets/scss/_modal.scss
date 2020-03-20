@@ -17,9 +17,9 @@
 
     .modal-content {
         position: relative;
-        background-color: $color_cloud;
-        margin: 10% auto; /* 10% from the top and centered */
-        border: 1px solid $color_ocean;
+        background-color: $color_ocean;
+        border-radius: 20px;
+        margin: 12% auto; /* 10% from the top and centered */
         width: 80%; /* Could be more or less, depending on screen size */
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5),0 6px 20px 0 rgba(0,0,0,0.5);
         animation-name: animatetop;
@@ -28,7 +28,6 @@
 
     .modal-header {
         padding: 20px 14px;
-        background-color: $color_ocean;
         color: $white;
         font-size: 2em;
 
@@ -53,7 +52,7 @@
     }
 
     .modal-body {
-        padding: 14px 7% 0px 7%;
+        padding: 14px 20px 0 20px;
 
         * {
             box-sizing: border-box;
@@ -75,6 +74,7 @@
             .input-field {
                 width: 100%;
                 padding: 10px;
+                margin-right: 40px;
                 outline: none;
             }
     
@@ -87,18 +87,18 @@
     .modal-footer {
         display: flex;
         justify-content: space-around;
-        padding: 20px 14px;
-        background-color: $color_ocean;
         color: $white;
-        font-size: 2em;
+        padding: 20px 0;
 
         .btn {
             background-color: $color-sky;
             color: $white;
             padding: 15px 20px;
+            font-size: 1.2em;
+            border-radius: 4px;
             border: none;
             cursor: pointer;
-            width: 40%;
+            width: 35%;
             opacity: 0.9;
         }
           
