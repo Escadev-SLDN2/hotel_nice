@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <!-- Ici se trouvent les métadonnées pour le navigateur -->
         <meta charset="utf-8" />
@@ -27,66 +27,57 @@
     </head>
 
     <body>
-
-        <form action="">
-            <div class="container">
-                <h2>Créer un compte</h2>
-                <div class="form-group">
-                    <label for="firstName">Prénom :*</label>
-                    <input type="text" id="firstName" name="firstName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="lastName">Nom :*</label>
-                    <input type="text" id="lastName" name="lastName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="nickName">Identifiant :*</label>
-                    <input type="text" id="nickName" name="nickName" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Mot de passe :*</label>
-                    <input type="text" id="password" name="password" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="confirm_password">Confirmation Mot de passe :*</label>
-                    <input type="text" id="confirm_password" name="confirm_password" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email :*</label>
-                    <input type="text" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="confirm_email">Confirmation Email :*</label>
-                    <input type="text" id="email" name="email" required>
-                </div>
-
-                <div>
-                    <label for="role">Rôle :*</label>
-                    <select name="roles" id="role-select">
-                        <option value="admin">Administrateur</option>
-                        <option value="goldfish">Staff</option>
-                        <option value="goldfish">Client</option>
-                    </select>
-                </div>
-
-                <div>
-                    <button type="submit" class="btn-inscription">
-                        Créer un compte
-                    </button>
-                </div>
+        <form action="">           
+            <h2>Créer un compte</h2>
+            <div class="form-field">
+                <label for="firstName">Prénom :*</label>
+                <input type="text" id="firstName" name="firstName" required>
             </div>
+
+            <div class="form-field">
+                <label for="lastName">Nom :*</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-field">
+                <label for="nickName">Identifiant :*</label>
+                <input type="text" id="nickName" name="nickName" required>
+            </div>
+
+            <div class="form-field">
+                <label for="password">Mot de passe :*</label>
+                <input type="text" id="password" name="password" required>
+            </div>
+
+            <div class="form-field">
+                <label for="confirm_password">Confirmation Mot de passe :*</label>
+                <input type="text" id="confirm_password" name="confirm_password" required>
+            </div>
+
+            <div class="form-field">
+                <label for="email">Email :*</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div class="form-field">
+                <label for="confirm_email">Confirmation Email :*</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div class="form-field">
+                <label for="role">Rôle :*</label>
+                <select name="roles" id="role-select">
+                    <option value="admin">Administrateur</option>
+                    <option value="goldfish">Staff</option>
+                    <option value="goldfish">Client</option>
+                </select>
+            </div>
+
+            <div>
+                <button type="submit">
+                    Créer un compte
+                </button>
+            </div>       
         </form>
-
-
-
-
-        
-    
     </body>
 </html>
