@@ -156,10 +156,54 @@
                     <p>&#128231; : reception@cda-nice.fr</p> 
                     <p>&#128205; : 69 Prom. des Anglais, 06200 Nice</p>
                 </div>
+
+                <?php if ($isConn) { ?>
+                    <div class="block lg centeredV centeredH color-sand">
+                        <button type="button" id="btnConnexionOffice">Administration</button>
+                    </div>
+                <?php } ?>
+
             </section>
+
         </main>
 
+        <!-- Modal(s) -->
+        <!-- Modal ConnexionOffice -->
+        <div id="modConnexionOffice" class="modal">
+            <div class="modal-content">
+                    
+                <!-- Header -->
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h6>Connexion à la page d'administration</h6>
+                </div>
+
+                <!-- Content -->
+                <div class="modal-body">
+                    <form action="/connexion_office.php">
+                        <div class="input-container">
+                            <i class="fa fa-user icon"></i>
+                            <input class="input-field" type="text" placeholder="Identifiant" name="usrnm">
+                        </div>
+                    
+                        <div class="input-container">
+                            <i class="fa fa-key icon"></i>
+                            <input class="input-field" type="password" placeholder="Password" name="psw">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button type="button" onclick="modal.style.display='none'" class="btn">Retour</button>
+                    <button type="submit" class="btn">Connexion</button>
+                </div>
+
+            </div>
+        </div>
+
         <!-- Script Javascript -->
+        <script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
         <script>
             let carousel = new Glide(".glide", {
@@ -169,5 +213,6 @@
             });
             carousel.mount();
         </script>
+        <script src="assets/js/modal.js"></script>
     </body>
 </html>
