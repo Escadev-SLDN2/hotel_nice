@@ -30,9 +30,10 @@
         <a href="index.html"><img src="../assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
         <h1><a href="index.html">Administration</a></h1>
         <nav>
-            <a href="">test</a>
-            <a href="">test</a>
-            <a href="">test</a>
+            <a href="">R&eacute;servations</a>
+            <a href="">Chambres</a>
+            <a href="">Liste clients</a>
+            <a class="active" href="">Mon compte</a>
         </nav>
     </header>
     <main>
@@ -41,5 +42,16 @@
             <a href="">test</a>
             <a href="">test</a>
         </nav>
+
+        <section class="row">
+            <div class="block lg side centeredV centeredH color-sky">
+                modification de compte
+            </div>
+        </section>
+        <section class="row">
+            <div class="block lg side centeredV centeredH color-sky">
+                options
+            </div>
+        </section>
     </main>
 </body>

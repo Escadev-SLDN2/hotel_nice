@@ -1,6 +1,7 @@
 body{
   main{
     .side-nav{
+      padding-top: 2vh;
       display: flex;
       flex-direction: column;
       width: 16vh;
@@ -11,13 +12,11 @@ body{
       left: 0;
       background-color: $color_sky;
       a{
-        margin-left: 20px;
-        margin-top : 10px;
-        margin-bottom: 10px;
+        margin: 1vh auto;
         text-decoration: none;
         color: $white;
         display: block;
-        &:hover{
+        &:hover, & .active{
           color: $color_sand;
         }
       }
