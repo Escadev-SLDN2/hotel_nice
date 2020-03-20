@@ -38,17 +38,16 @@
     </header>
     <main>
         <nav class="side-nav">
-            <a href="">test</a>
-            <a href="">test</a>
-            <a href="">test</a>
+            <a href="#compte">compte</a>
+            <a href="#options">options</a>
         </nav>
 
-        <section class="row">
+        <section class="row" id="compte">
             <div class="block lg side centeredV centeredH color-sky">
                 modification de compte
             </div>
         </section>
-        <section class="row">
+        <section class="row" id="options">
             <div class="block lg side centeredV centeredH color-sky">
                 options
             </div>
