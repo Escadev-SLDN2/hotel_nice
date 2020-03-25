@@ -179,14 +179,14 @@
                 <!-- Content -->
                 <div class="modal-body">
                     <form action="/connexion_office.php">
-                        <div class="input-container">
-                            <i class="fa fa-user icon"></i>
-                            <input class="input-field" type="text" placeholder="Identifiant" name="usrnm">
+                        <div class="input-container form-field">
+                            <label for="usrnm"><i class="fa fa-user icon"></i></label>
+                            <input class="input-field" type="text" placeholder="Identifiant" name="usrnm" id="usrnm" required>
                         </div>
                     
-                        <div class="input-container">
-                            <i class="fa fa-key icon"></i>
-                            <input class="input-field" type="password" placeholder="MotDePasse" name="psw">
+                        <div class="input-container form-field">
+                            <label for="psw"><i class="fa fa-key icon"></i></label>
+                            <input class="input-field" type="password" placeholder="MotDePasse" name="psw" id="psw" required>
                         </div>
                     </form>
                 </div>
