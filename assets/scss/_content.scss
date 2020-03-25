@@ -28,6 +28,10 @@
             flex-basis: 0;
         }
 
+        &.side{
+            margin-left: 18vh;
+        }
+
         &.centeredV{
             display: flex;
             flex-direction: column;
