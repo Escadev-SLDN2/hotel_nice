@@ -1,0 +1,25 @@
+form {
+
+    h2 {
+        margin-left: 1vw;
+    }
+    
+    .form-field {
+        margin: 1vh 2vw;
+        width: inherit;
+        display: flex;
+        input{
+            display: inline-block;
+            width: 50%;
+            margin-left: auto;
+        }
+        select{
+            margin-left: auto;
+        }
+    }
+
+    button {
+        margin-left: 1vw;
+        padding: 7px 20px;
+    }
+}

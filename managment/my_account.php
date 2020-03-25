@@ -30,10 +30,11 @@
         <a href="index.html"><img src="../assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
         <h1><a href="index.html">Administration</a></h1>
         <nav>
+            <a href="adm.php">Admin</a>
             <a href="">R&eacute;servations</a>
             <a href="">Chambres</a>
-            <a href="">Liste clients</a>
-            <a class="active" href="">Mon compte</a>
+            <a href="">Clients</a>
+            <a class="active" href="my_account.php">Mon compte</a>
         </nav>
     </header>
     <main>
