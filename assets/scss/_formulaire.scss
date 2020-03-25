@@ -1,0 +1,22 @@
+form {
+
+    h2 {
+        margin-left: 15px;
+    }
+    
+    .form-field {
+        margin: 15px;
+
+        label,input {
+            display: inline-block;
+            width: 30%;
+            text-align: left;
+        }
+    }
+
+    button {
+        margin-top: 15px;
+        margin-left: 15px;
+        padding: 7px 20px;
+    }
+}
