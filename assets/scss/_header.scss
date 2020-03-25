@@ -1,11 +1,12 @@
 body {
     &>header{
-    color: $white;
-    display: flex;
-    align-items: center;
-    height: 110px;
-    background-color: $color_cloud;
-    font-size: 2em;
+        color: $white;
+        display: flex;
+        align-items: center;
+        height: 110px;
+        width: 100vw;
+        background-color: $color_cloud;
+        font-size: 2em;
 
         a{
             max-height: 90px;
@@ -36,9 +37,19 @@ body {
             }
         }
 
-        .menu{
-            font-size: 20px;
-            text-align: left;
+        nav{
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-wrap: wrap;
+            a{
+                margin: 1vh 2vw;
+                text-decoration: none;
+                color: $white;
+                &:hover, &.active{
+                    color: $color_sky;
+                }
+            }
         }
     }
 }

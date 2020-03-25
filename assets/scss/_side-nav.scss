@@ -1,0 +1,25 @@
+body{
+  main{
+    .side-nav{
+      padding-top: 2vh;
+      display: flex;
+      flex-direction: column;
+      width: 16vh;
+      height: 100%;
+      z-index: 1;
+      position: fixed;
+      top: 110px;
+      left: 0;
+      background-color: $color_sky;
+      a{
+        margin: 1vh auto;
+        text-decoration: none;
+        color: $white;
+        display: block;
+        &:hover, & .active{
+          color: $color_sand;
+        }
+      }
+    }
+  }
+}

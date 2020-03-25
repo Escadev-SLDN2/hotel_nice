@@ -1,16 +1,20 @@
 form {
 
     h2 {
-        margin-left: 15px;
+        margin-left: 1vw;
     }
     
     .form-field {
-        margin: 15px;
-
-        label,input {
+        margin: 1vh 2vw;
+        width: inherit;
+        display: flex;
+        input{
             display: inline-block;
-            width: 30%;
-            text-align: left;
+            width: 50%;
+            margin-left: auto;
+        }
+        select{
+            margin-left: auto;
         }
     }
 
@@ -18,5 +22,7 @@ form {
        
         
         
+        margin-left: 1vw;
+        padding: 7px 20px;
     }
 }
