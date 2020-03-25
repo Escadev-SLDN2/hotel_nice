@@ -1,0 +1,11 @@
+body {
+    &>footer{
+    color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 110px;
+    background-color: $color_sand;
+    font-size: 2em;
+    }
+}

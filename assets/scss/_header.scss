@@ -30,7 +30,8 @@ body {
             a {
                 color: $color_sky;
                 text-decoration: none;
-                &:hover, &:visited {
+                &:hover,
+                &:visited {
                     color: $color_ocean;
                 }
             }
