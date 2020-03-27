@@ -159,7 +159,48 @@
             </section>
         </main>
 
+        <!-- Footer -->
+        <footer>
+            <button type="button" id="btnConnexionOffice">Administration</button>
+        </footer>
+
+        <!-- Modal(s) -->
+        <!-- Modal ConnexionOffice -->
+        <div id="modConnexionOffice" class="modal">
+            <div class="modal-content">
+                    
+                <!-- Header -->
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h6>Connexion à la page d'administration</h6>
+                </div>
+
+                <!-- Content -->
+                <div class="modal-body">
+                    <form action="/connexion_office.php">
+                        <div class="input-container form-field">
+                            <label for="usrnm"><i class="fa fa-user icon"></i></label>
+                            <input class="input-field" type="text" placeholder="Username" name="usrnm" id="usrnm" required>
+                        </div>
+                    
+                        <div class="input-container form-field">
+                            <label for="psw"><i class="fa fa-key icon"></i></label>
+                            <input class="input-field" type="password" placeholder="YourPassword" name="psw" id="psw" required>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button type="button" onclick="modal.style.display='none'" class="btn">Return</button>
+                    <button type="submit" class="btn">Log In</button>
+                </div>
+
+            </div>
+        </div>
+
         <!-- Script Javascript -->
+        <script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
         <script>
             let carousel = new Glide(".glide", {
@@ -169,5 +210,4 @@
             });
             carousel.mount();
         </script>
-    </body>
-</html>
+        <script src="assets/js/modal.js"></script>
