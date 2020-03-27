@@ -44,8 +44,47 @@
         </nav>
 
         <section class="row" id="compte">
-            <div class="block lg side centeredV centeredH color-sky">
-                modification de compte
+            <div class="block lg side color-sky">
+                <form action="">
+                    <h2>Modifier vos données</h2>
+                    <h4 class="form-field"><u>Modifier votre adresse mail</u></h4>
+                    <div class="form-field">
+                        <label for="oldmail">Ancienne adresse mail :*</label>
+                        <input type="text"id="oldmail" name="oldmail" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="newmail">Nouvelle adresse mail :*</label>
+                        <input type="text" id="newmail" name="newmail" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="confirmmail">Confirmer nouvelle adresse :*</label>
+                        <input type="text" id="confirmmail" name="confirmmail" required>
+                    </div>
+
+                    <h4 class="form-field"><u>Modifier votre mot de passe</u></h4>
+                    <div class="form-field">
+                        <label for="oldpassword">Ancien mot de passe :*</label>
+                        <input type="text" id="oldpassword" name="oldpassword" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="newpassword">Nouveau mot de passe :*</label>
+                        <input type="text" id="newpassword" name="newpassword" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="confirmpassword">Confirmer nouveau mot de passe :*</label>
+                        <input type="text" id="confirmpassword" name="confirmpassword" required>
+                    </div>
+
+                    <div>
+                        <button type="submit"class="button button_ocean">
+                            Valider vos modifications
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
         <section class="row" id="options">
