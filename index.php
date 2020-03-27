@@ -177,25 +177,25 @@
                 </div>
 
                 <!-- Content -->
-                <div class="modal-body">
-                    <form action="script_php/connexion_office.php" method="POST" role="form">
+                <form action="script_php/connexion_office.php" method="POST" role="form">
+                    <div class="modal-body">
                         <div class="input-container form-field">
-                            <label for="usrnm"><i class="fa fa-user icon"></i></label>
-                            <input class="input-field" type="text" placeholder="Identifiant" name="usrnm" id="usrnm" required>
+                            <label for="mail"><i class="fa fa-user icon"></i></label>
+                            <input class="input-field" type="text" placeholder="Adresse@Mail" name="mail" id="mail" required>
                         </div>
                     
                         <div class="input-container form-field">
                             <label for="psw"><i class="fa fa-key icon"></i></label>
                             <input class="input-field" type="password" placeholder="MotDePasse" name="psw" id="psw" required>
                         </div>
-                    </form>
-                </div>
+                    </div>
 
-                <!-- Footer -->
-                <div class="modal-footer">
-                    <button type="button" onclick="modal.style.display='none'" class="btn">Retour</button>
-                    <button type="submit" class="btn">Connexion</button>
-                </div>
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" onclick="modal.style.display='none'" class="btn">Retour</button>
+                        <button type="submit" class="btn">Connexion</button>
+                    </div>
+                </form>
 
             </div>
         </div>
