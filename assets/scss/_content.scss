@@ -83,4 +83,20 @@
             transform: scale(0.33) translate(-150%,-150%);
         }
     }
+    button {
+        margin-left: 1vw;
+        margin-top: 1em;
+        padding: 7px 20px;
+        border-radius: 0.8vw;
+        border: none;
+       
+        
+        &.button_sand{
+            background-color:$color_sand;
+        }
+        &.button_ocean{
+            background-color:$color_ocean;
+            
+        }   
+    }
 }

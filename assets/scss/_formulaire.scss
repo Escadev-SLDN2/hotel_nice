@@ -17,22 +17,5 @@ form {
             margin-left: auto;
         }
     }
-
-    button {
-        margin-left: 1vw;
-        margin-top: 1em;
-        padding: 7px 20px;
-       
-        
-        &.button_no{
-            background-color:$color_sand;
-            border-radius: 0.8vw;
-            border: none;
-        }
-        &.button_yes{
-            background-color:$color_ocean;
-            border-radius: 0.8vw;
-            border: none;
-        }   
-    }     
+     
 }
