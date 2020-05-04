@@ -29,9 +29,9 @@
     <body>
         <!-- Header -->
         <header>
-            <a href="index.html"><img src="assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
-            <h1><a href="index.html">CDA Hotel Nice</a></h1>
-            <p>FR / <a href="index_en.html">EN</a></p>
+            <a href="index.php"><img src="assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
+            <h1><a href="index.php">CDA Hotel Nice</a></h1>
+            <p>FR / <a href="index_en.php">EN</a></p>
         </header>
 
         <main>
