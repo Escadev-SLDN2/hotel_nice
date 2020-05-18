@@ -13,11 +13,14 @@ Application facilitant la gestion par les employés de *l'hotel CDA basé à Nic
 1- Cloner le répository via git hub:
 https://github.com/Escadev-SLDN2/hotel_nice.git
 
-2- Configurer le compilateur de fichiers comme ci dessous:
+2- Installer le compilateur de fichiers live sass: 
+ritwickdey.live-sass
+
+3- Configurer le compilateur de fichiers comme ci dessous:
     {
       "format": "compressed",
       "extensionName": ".min.css",
       "savePath": "~/../css/"
     }
 
-3- Activer le compilateur 
+4- Activer le compilateur 
