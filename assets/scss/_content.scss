@@ -7,46 +7,39 @@
         flex-direction: row-reverse;
     }
 
-    .block {
+    .block-content {
         border-radius: 0.8vw;
         min-height: 10vh;
         margin: 2vh 2vh;
         padding: 4vh 2vh;
         overflow: hidden;
         position: relative;
-        &.sm {
+        &.small-block {
             flex-grow: 0;
             flex-shrink: 0;
         }
-        &.md{
+        &.medium-block{
             flex-grow: 1;
             flex-basis: 0;
             flex-shrink: 0;
         }
-        &.lg {
+        &.large-block {
             flex-grow: 2;
             flex-basis: 0;
         }
 
-        &.side{
+        &.margin-left-side{
             margin-left: 18vh;
         }
 
-        &.centeredV{
+        &.centered{
             display: flex;
             flex-direction: column;
             align-items: center;
             h1,h2,h3,h4,h5,h6{
                 align-self: flex-start;
                 margin-left: 4vh;
-                margin-right: 8vh;              
-            }
-        }
-        &.centeredH{
-            justify-content: center;
-
-            p{
-                margin: 0 1vh;
+                margin-right: 8vh;           
             }
         }
 
