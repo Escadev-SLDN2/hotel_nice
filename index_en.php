@@ -65,14 +65,15 @@
                     </p>
                     <p>
                     Get yourself a a break and come rest in a beautifull typical house, a few steps away of the warm 
-                    mediterranean sea and the center of Nice, where seagulls and cicadas will be the only one breaking the silence.<br/><br/>
+                    mediterranean sea and the center of Nice, where seagulls and cicadas will be the only one breaking the silence.
                     </p>
                     <p>
-                        With our delicious mediterranean meals, prepared with local selected food, and the cocooning aspect of our rooms, you will enter here in a warm and comfortable bubble.<br/><br/>
+                        With our delicious mediterranean meals, prepared with local selected food, and the cocooning aspect of our rooms, you will enter here in a warm and comfortable bubble.
                     </p>
                     <p>
-                        Our team will be here for you, the ambiance of the hostel, simple and intimate will provide you all the rest you need wether it be after a job meeting or a long vacation day under the sweet shoreline sun.<br/><br/></p></div>
+                        Our team will be here for you, the ambiance of the hostel, simple and intimate will provide you all the rest you need wether it be after a job meeting or a long vacation day under the sweet shoreline sun.
                     </p>
+                </div>
                 <div class="block-content medium-block">
                     <img src="assets/img/facade.jpg" alt="facade de l'hotel">
                 </div>
@@ -84,7 +85,7 @@
                         The classics
                     </h2>
                     <p>
-                        Promenade des Anglais, Négresco, flowering gardens and parcs, warm clear sea, colorful typical buildings… Many places to discover and visit under the French riviera sun.<br/><br/>
+                        Promenade des Anglais, Négresco, flowering gardens and parcs, warm clear sea, colorful typical buildings… Many places to discover and visit under the French riviera sun.
                     </p>
                     <ul>
                         <li>
