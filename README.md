@@ -7,8 +7,6 @@ Application facilitant la gestion par les employés de *l'hotel CDA basé à Nic
 
 *Php version 7.0 ou postérieur (recommandation version 7.3 ou 7.4)
 
-*Compilateur de fichier pour architecture _SCSS_
-
 *Cloner le répository via git hub:
 https://github.com/Escadev-SLDN2/hotel_nice.git
 
