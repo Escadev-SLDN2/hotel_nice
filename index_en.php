@@ -59,31 +59,59 @@
 
             <!-- Content -->
             <section class="row">
-                <div class="block lg centeredV centeredH color-sky"><p class="text">
-                    The french riviera ? This word immediately reminde you the wonderfull 19th century’s seaside stations, where lived the wealthy industrial families that came here to escape the winter’s bite. Come here in Nice and get a taste of these times. 
-                    <br/>
-                    <br/>
-
+                <div class="block-content large-block color-sky">
+                    <p>
+                        The french riviera ? This word immediately reminde you the wonderfull 19th century’s seaside stations, where lived the wealthy industrial families that came here to escape the winter’s bite. Come here in Nice and get a taste of these times. 
+                    </p>
+                    <p>
                     Get yourself a a break and come rest in a beautifull typical house, a few steps away of the warm 
-                    mediterranean sea and the center of Nice, where seagulls and cicadas will be the only one breaking the silence.<br/><br/>
-                    With our delicious mediterranean meals, prepared with local selected food, and the cocooning aspect of our rooms, you will enter here in a warm and comfortable bubble.<br/><br/>
-                    Our team will be here for you, the ambiance of the hostel, simple and intimate will provide you all the rest you need wether it be after a job meeting or a long vacation day under the sweet shoreline sun.<br/><br/></p></div>
-                <div class="block md">
+                    mediterranean sea and the center of Nice, where seagulls and cicadas will be the only one breaking the silence.
+                    </p>
+                    <p>
+                        With our delicious mediterranean meals, prepared with local selected food, and the cocooning aspect of our rooms, you will enter here in a warm and comfortable bubble.
+                    </p>
+                    <p>
+                        Our team will be here for you, the ambiance of the hostel, simple and intimate will provide you all the rest you need wether it be after a job meeting or a long vacation day under the sweet shoreline sun.
+                    </p>
+                </div>
+                <div class="block-content medium-block">
                     <img src="assets/img/facade.jpg" alt="facade de l'hotel">
                 </div>
             </section>
 
             <section class="row reverse">
-                <div class="block lg centeredV centeredH color-sky"><p>The classics<br/><br/>
-                    Promenade des Anglais, Négresco, flowering gardens and parcs, warm clear sea, colorful typical buildings… Many places to discover and visit under the French riviera sun.<br/><br/>
-                        • La Promenade des Anglais<br/>
-                        • Le cours Saleya<br/>
-                        • La place Masséna<br/>
-                        • Matisse museum<br/>
-                        • Mamac (Modern art museum)<br/>
-                        • National Chagall museum<br/>
-                        • Nice's harbor<br/><br/></p></div>
-                <div class="block md">
+                <div class="block-content large-block color-sky">
+                    <h2>
+                        The classics
+                    </h2>
+                    <p>
+                        Promenade des Anglais, Négresco, flowering gardens and parcs, warm clear sea, colorful typical buildings… Many places to discover and visit under the French riviera sun.
+                    </p>
+                    <ul>
+                        <li>
+                            La Promenade des Anglais
+                        </li>
+                        <li>
+                            Le cours Saleya
+                        </li>
+                        <li>
+                            La place Masséna
+                        </li>
+                        <li>
+                            Matisse museum
+                        </li>
+                        <li>
+                            Mamac (Modern art museum)
+                        </li>
+                        <li>
+                            National Chagall museum
+                        </li>
+                        <li>
+                            Nice's harbor
+                        </li>
+                    </ul>
+                </div>
+                <div class="block-content medium-block">
                     <img src="assets/img/promenade.jpg" alt="promenade de nice">
                 </div>
 
@@ -91,8 +119,8 @@
 
             <!-- Tarifs -->
             <section class="row">
-                <div class="block sm centeredV color-ocean">
-                    <h4>Simple Room :</h4>
+                <div class="block-content small-block centered color-ocean">
+                    <h2>Simple Room :</h2>
                     <ul>
                         <li>
                             November-March : 69 €/night
@@ -105,8 +133,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="block sm centeredV color-ocean">
-                    <h4>Double Room :</h4>
+                <div class="block-content small-block centered color-ocean">
+                    <h2>Double Room :</h2>
                     <ul>
                         <li>
                             November-March : 71 €/night
@@ -119,8 +147,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="block sm centeredV color-ocean">
-                    <h4>Double Room with kitchen :</h4>
+                <div class="block-content small-block centered color-ocean">
+                    <h2>Double Room with kitchen :</h2>
                     <ul>
                         <li>
                             November-March : 93 €/night
@@ -133,8 +161,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="block sm centeredV color-ocean">
-                    <h4>Family Room :</h4>
+                <div class="block-content small-block centered color-ocean">
+                    <h2>Family Room :</h2>
                     <ul>
                         <li>
                             November-March : 159 €/night
@@ -151,7 +179,7 @@
 
             <!-- Contact -->
             <section class="row">
-                <div class="block lg centeredV centeredH color-sand">
+                <div class="block-content large-block centered color-sand">
                     <p>&#128222; : (+33) 04 20 69 69 69</p> 
                     <p>&#128231; : reception@cda-nice.fr</p> 
                     <p>&#128205; : 69 Prom. des Anglais, 06200 Nice</p>

@@ -60,39 +60,66 @@
 
             <!-- Content -->
             <section class="row">
-                <div class="block lg centeredV centeredH color-sky"><p class="text">
-                    La Riviera française ? Vous pensez immédiatement aux superbes stations balnéaires du 19e siècle où se côtoyaient riches familles industrielles et aristocratie européenne, venues là pour échapper à la froidure hivernale. Un lieu mythique qui se déploie de Nice à Menton.  Séjournez à Nice et retrouvez le goût de cette époque.
-                    <br/>
-                    <br/>
-
-                    Offrez vous un moment de répit et venez vous ressourcer dans une superbe bâtisse typique de la région, à deux pas tant bien du centre de Nice que de la mer, dans laquelle le chant des cigales et des mouettes est seul à troubler le silence.<br/><br/>
-                    Entre les repas méditerranéens cuisinés à base des produits choisis venant de circuits courts, et l’aspect cocon de nos chambres, vous entrerez dans une bulle chaleureuse et confortable.<br/><br/>
-                    Notre équipe sera là, à votre écoute, et l’ambiance familiale, simple et efficace de l’hôtel vous offrira le repos dont vous aurez besoin, que ce soit après un rendez vous professionnel ou une longue journée de vacance sous le soleil doux de la côte.<br/><br/></p></div>
-                <div class="block md">
+                <div class="block-content large-block color-sky">
+                    <p>
+                        La Riviera française ? Vous pensez immédiatement aux superbes stations balnéaires du 19ème siècle où se côtoyaient riches familles industrielles et aristocratie européenne, venues là pour échapper à la froidure hivernale. Un lieu mythique qui se déploie de Nice à Menton.  Séjournez à Nice et retrouvez le goût de cette époque.
+                    </p>
+                    <p>
+                        Offrez vous un moment de répit et venez vous ressourcer dans une superbe bâtisse typique de la région, à deux pas tant bien du centre de Nice que de la mer, dans laquelle le chant des cigales et des mouettes est seul à troubler le silence.
+                    </p>
+                    <p>
+                        Entre les repas méditerranéens cuisinés à base des produits choisis venant de circuits courts, et l&apos;aspect cocon de nos chambres, vous entrerez dans une bulle chaleureuse et confortable.
+                    </p>
+                    <p>
+                        Notre équipe sera là, à votre écoute, et l&apos;ambiance familiale, simple et efficace de l&apos;hôtel vous offrira le repos dont vous aurez besoin, que ce soit après un rendez vous professionnel ou une longue journée de vacance sous le soleil doux de la côte.
+                    </p>
+                </div>
+                <div class="block-content medium-block">
                     <img src="assets/img/facade.jpg" alt="facade de l'hotel">
                 </div>
             </section>
 
             <section class="row reverse">
-                <div class="block lg centeredV centeredH color-sky"><p>Les Incontournables
-                    Promenade des Anglais, Négresco, jardins et parcs fleuris, plage sur mer chaude, façades colorées du centre-ville… Autant de lieux à parcourir et à découvrir sous le soleil azuréen.<br/><br/>
-                        • La Promenade des Anglais<br/>
-                        • Le cours Saleya<br/>
-                        • La place Masséna<br/>
-                        • Musée Matisse<br/>
-                        • Mamac (Musée d'Art Moderne et d'Art Contemporain)<br/>
-                        • Musée National Chagall<br/>
-                        • Le Port de Nice<br/><br/></p></div>
-                <div class="block md">
+                <div class="block-content large-block color-sky">
+                    <h2>
+                        Les Incontournables
+                    </h2>
+                    <p>
+                        Promenade des Anglais, Négresco, jardins et parcs fleuris, plage sur mer chaude, façades colorées du centre-ville… Autant de lieux à parcourir et à découvrir sous le soleil azuréen.   
+                    </p>
+                    <ul> 
+                        <li>
+                            La Promenade des Anglais
+                        </li>
+                        <li>
+                            Le cours Saleya
+                        </li>
+                        <li>
+                            La place Masséna
+                        </li>
+                        <li>
+                            Musée Matisse
+                        </li>
+                        <li>
+                            Mamac (Musée d&apos;Art Moderne et d&apos;Art Contemporain)
+                        </li>
+                        <li>
+                            Musée National Chagall
+                        </li>
+                        <li>
+                            Le Port de Nice
+                        </li>
+                    </ul>
+                </div>
+                <div class="block-content medium-block">
                     <img src="assets/img/promenade.jpg" alt="promenade de nice">
                 </div>
-
             </section>
 
             <!-- Tarifs -->
             <section class="row">
-                <div class="block sm centeredV color-ocean">
-                    <h4>Chambre simple :</h4>
+                <div class="block-content small-block centered color-ocean">
+                    <h2>Chambre simple :</h2>
                     <ul>
                         <li>
                             Novembre-Mars : 69 €/nuit
@@ -105,8 +132,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="block sm centeredV color-ocean">
-                    <h4>Chambre double :</h4>
+                <div class="block-content small-block centered color-ocean">
+                    <h2>Chambre double :</h2>
                     <ul>
                         <li>
                             Novembre-Mars : 71 €/nuit
@@ -119,8 +146,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="block sm centeredV color-ocean">
-                    <h4>Chambre double avec cuisine :</h4>
+                <div class="block-content small-block centered color-ocean">
+                    <h2>Chambre double avec cuisine :</h2>
                     <ul>
                         <li>
                             Novembre-Mars : 93 €/nuit
@@ -133,8 +160,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="block sm centeredV color-ocean">
-                    <h4>Chambre familiale :</h4>
+                <div class="block-content small-block centered color-ocean">
+                    <h2>Chambre familiale :</h2>
                     <ul>
                         <li>
                             Novembre-Mars : 159 €/nuit
@@ -151,7 +178,7 @@
 
             <!-- Contact -->
             <section class="row">
-                <div class="block lg centeredV centeredH color-sand">
+                <div class="block-content large-block centered color-sand">
                     <p>&#128222; : (+33) 04 20 69 69 69</p> 
                     <p>&#128231; : reception@cda-nice.fr</p> 
                     <p>&#128205; : 69 Prom. des Anglais, 06200 Nice</p>
