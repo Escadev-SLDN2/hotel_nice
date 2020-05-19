@@ -7,19 +7,19 @@ Application facilitant la gestion par les employés de *l'hotel CDA basé à Nic
 
 *Php version 7.0 ou postérieur (recommandation version 7.3 ou 7.4)
 
-*Cloner le répository via git hub:
-https://github.com/Escadev-SLDN2/hotel_nice.git
-
-*Installer le compilateur de fichiers live sass: 
-ritwickdey.live-sass
+*Compilateur de fichier live sass : ritwickdey.live-sass
 
 # Installation
 
-1- Configurer le compilateur de fichiers comme ci dessous:
+1- Cloner le répository via git-hub:
+	https://github.com/Escadev-SLDN2/hotel_nice.git
+
+2- Configurer le compilateur live sass comme ci dessous:
     {
       "format": "compressed",
       "extensionName": ".min.css",
       "savePath": "~/../css/"
     }
 
-2- Activer le compilateur 
+3- Activer le compilateur 
+
