@@ -6,11 +6,11 @@ $requestUri = str_replace('/hotel_nice/', '', $_SERVER['REQUEST_URI']);
 
 $requestParams = explode('/', $requestUri);
 
-$controller = ucfirst($requestParams[0]) . 'Controller';
-$action = $requestParams[1] . 'Action';
+$controller = !empty($requestParams[0]) ? ucfirst($requestParams[0]) . 'Controller' : '';
+$action = !empty($requestParams[1]) ? $requestParams[1] . 'Action' : '';
 
 if (empty($controller)) {
-    require('view/homepage.php');
+    require('views/homepage.php');
 } else {  
     if (file_exists('controllers/'. $controller . '.php')) {
         require('controllers/' . $controller . '.php');
