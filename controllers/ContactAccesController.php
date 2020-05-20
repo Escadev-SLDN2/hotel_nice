@@ -1,8 +1,8 @@
 <?php
 function contactAction() {
-    require('views/liste_contact.php');
+    require('views/contact.php');
 }
 
 function accesAction() {
-    require('views/localisation.php');
+    require('views/acces.php');
 }
