@@ -6,20 +6,15 @@ $requestUri = str_replace('/hotel_nice/', '', $_SERVER['REQUEST_URI']);
 
 $requestParams = explode('/', $requestUri);
 
-$controller = !empty($requestParams[0]) ? ucfirst($requestParams[0]) . 'Controller' : '';
-$action = !empty($requestParams[1]) ? $requestParams[1] . 'Action' : '';
+$controller = (!empty($requestParams[0]) ? ucfirst($requestParams[0])  : 'Accueil'). 'Controller';
+$action = (!empty($requestParams[1]) ? $requestParams[1] : 'index'). 'Action';
 
-if (empty($controller)) {
-    require('views/homepage.php');
-} else {  
-    if (file_exists('controllers/'. $controller . '.php')) {
-        require('controllers/' . $controller . '.php');
-        if (function_exists($action)) {
-            $action();
-        } else {
-            require('404.php');
-        }
+if (file_exists('controllers/'. $controller . '.php')) {
+    require('controllers/' . $controller . '.php');
+    if (function_exists($action)) {
+        $action();
     } else {
         require('404.php');
     }
 }
+

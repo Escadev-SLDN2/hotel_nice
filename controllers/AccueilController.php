@@ -1,4 +1,4 @@
 <?php
-function listeAction() {
-    require('views/liste_accueil.php');
+function indexAction() {
+    require('views/homepage.php');
 }
