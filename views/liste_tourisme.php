@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel CDA Nice - Activités touristiques</title>
+    <title>Activités touristiques - Hotel CDA Nice</title>
 </head>
 <body>
     <h1>Tourisme</h1>

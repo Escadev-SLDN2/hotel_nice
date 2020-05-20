@@ -8,7 +8,7 @@
 
 
     <!-- Ici se trouvent les métadonnées pour le moteur de recherche (et le navigateur) -->
-    <title>CDA Hotel Nice - Administration</title>
+    <title>Administration - CDA Hotel Nice</title>
     <meta
         name="description"
         content="Ce petit paragraphe sera affiché dans les SERP, juste sous le titre des pages."
