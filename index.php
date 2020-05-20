@@ -16,5 +16,7 @@ if (file_exists('controllers/'. $controller . '.php')) {
     } else {
         require('404.php');
     }
+} else {
+    require('404.php');
 }
 
