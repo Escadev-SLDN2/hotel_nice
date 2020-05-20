@@ -18,6 +18,7 @@ body {
         h1 {
             font-family: $font-title;
             margin-left: 20px;
+            font-size: 1.2em;
             a {
                 text-decoration: none;
                 color: $white;
@@ -33,21 +34,6 @@ body {
                 &:hover,
                 &:visited {
                     color: $color_ocean;
-                }
-            }
-        }
-
-        nav{
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-wrap: wrap;
-            a{
-                margin: 1vh 2vw;
-                text-decoration: none;
-                color: $white;
-                &:hover, &.active{
-                    color: $color_sky;
                 }
             }
         }
