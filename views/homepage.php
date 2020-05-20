@@ -30,9 +30,18 @@
         <!-- Header -->
         <header>
             <a href="index.php"><img src="assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
-            <h1><a href="index.php">CDA Hotel Nice</a></h1>
+            <h1><a href="index.php">CDA Hotel Nice</a></h1>            
             <p>FR / <a href="index_en.php">EN</a></p>
         </header>
+        
+        <!-- Menu -->
+        <nav>
+            <ul><li><a href="">Accueil</a></li></ul>
+            <ul><li><a href="">Chambres</a></li></ul>
+            <ul><li><a href="">Services</a></li></ul>
+            <ul><li><a href="">Tourisme</a></li></ul>
+            <ul><li><a href="">Nous trouver</a></li></ul>
+        </nav>
 
         <main>
             <!-- Carousel -->
