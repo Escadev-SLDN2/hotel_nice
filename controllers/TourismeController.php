@@ -1,4 +1,4 @@
 <?php
 function indexAction() {
-    require('views/liste_tourisme.php');
+    require('views/TourismeController/tourisme.php');
 }
