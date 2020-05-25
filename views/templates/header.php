@@ -8,7 +8,7 @@
         
 
         <!-- Ici se trouvent les métadonnées pour le moteur de recherche (et le navigateur) -->
-        <title><?php echo (!empty($pageTitle) ? $pageTitle.' - ' : ''); ?>CDA Hotel Nice</title>
+        <title><?php if(!empty($pageTitle)) echo $pageTitle.' - '; ?>CDA Hotel Nice</title>
         <meta
             name="description"
             content="Ce petit paragraphe sera affiché dans les SERP, juste sous le titre des pages."

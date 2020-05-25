@@ -17,9 +17,13 @@ if (file_exists('controllers/'. $controller . '.php')) {
         require('views/templates/header.php');
         $action();
     } else {
+        $pageTitle = 'Erreur 404';
+        require('views/templates/header.php');
         require('404.php');
     }
 } else {
+    $pageTitle = 'Erreur 404';
+    require('views/templates/header.php');
     require('404.php');
 }
 
