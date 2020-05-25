@@ -1,4 +1,4 @@
 <?php
-function listeAction() {
-    require('views/liste_chambre.php');
+function indexAction() {
+    require('views/ChambreController/chambre.php');
 }
