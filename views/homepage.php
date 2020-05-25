@@ -1,5 +1,4 @@
 
-        <main>
             <!-- Carousel -->
             <section class="carousel-container">
                 <div class="glide">
