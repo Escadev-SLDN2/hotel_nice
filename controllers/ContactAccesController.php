@@ -1,8 +1,8 @@
 <?php
 function contactAction() {
-    require('views/ContactAccesController/contact.php');
+    require('views/ContactAcces/contact.php');
 }
 
 function accesAction() {
-    require('views/ContactAccesController/acces.php');
+    require('views/ContactAcces/acces.php');
 }

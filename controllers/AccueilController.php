@@ -1,4 +1,4 @@
 <?php
 function indexAction() {
-    require('views/AccueilController/homepage.php');
+    require('views/Accueil/homepage.php');
 }

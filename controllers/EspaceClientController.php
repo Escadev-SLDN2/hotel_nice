@@ -1,4 +1,4 @@
 <?php
 function indexAction() {
-    require('views/EspaceClientController/espace_client.php');
+    require('views/EspaceClient/espace_client.php');
 }
