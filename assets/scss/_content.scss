@@ -62,20 +62,11 @@
 
         }
         
-        ul{
+        .ul-no-bullet{
             list-style-type: none;
             margin: 0;
             padding: 0;
-            
-            &.ul-bullet-list{
-                li {
-                    margin-left: 20px;
-                    list-style-type: disc;
-                   } 
-            }
         }
-
-        
         
         img{
             
