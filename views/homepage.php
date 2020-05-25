@@ -24,6 +24,7 @@
 
         <!-- Ici se trouvent les liens vers les feuilles de styles -->
         <link rel="stylesheet" href="<?= SITE_DIR?>assets/css/styles.min.css" />
+        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Ubuntu"/>
     </head>
 
     <body>
