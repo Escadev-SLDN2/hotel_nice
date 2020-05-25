@@ -23,13 +23,13 @@
         <meta name="theme-color" content="#ffffff"/>
 
         <!-- Ici se trouvent les liens vers les feuilles de styles -->
-        <link rel="stylesheet" href="assets/css/styles.min.css" />
+        <link rel="stylesheet" href="<?= SITE_DIR?>assets/css/styles.min.css" />
     </head>
 
     <body>
         <!-- Header -->
         <header>
-            <a href="<?= SITE_DIR?>"><img src="assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
+            <a href="<?= SITE_DIR?>"><img src="<?= SITE_DIR?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
             <h1><a href="<?= SITE_DIR?>">CDA Hotel Nice</a></h1>
             <p>FR / <a href="<?= SITE_DIR?>en">EN</a></p>
         </header>
@@ -50,13 +50,13 @@
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             <li class="glide__slide">
-                                <img src="assets/img/hotel.jpg" width="100%" />
+                                <img src="<?= SITE_DIR?>assets/img/hotel.jpg" width="100%" />
                             </li>
                             <li class="glide__slide">
-                                <img src="assets/img/resort.jpg" width="100%" />
+                                <img src="<?= SITE_DIR?>assets/img/resort.jpg" width="100%" />
                             </li>
                             <li class="glide__slide">
-                                <img src="assets/img/breakfast.jpg" width="100%" />
+                                <img src="<?= SITE_DIR?>assets/img/breakfast.jpg" width="100%" />
                             </li>
                         </ul>
                     </div>
@@ -84,7 +84,7 @@
                     </p>
                 </div>
                 <div class="block-content medium-block">
-                    <img src="assets/img/facade.jpg" alt="facade de l'hotel"/>
+                    <img src="<?= SITE_DIR?>assets/img/facade.jpg" alt="facade de l'hotel"/>
                 </div>
             </section>
 
@@ -121,7 +121,7 @@
                     </ul>
                 </div>
                 <div class="block-content medium-block">
-                    <img src="assets/img/promenade.jpg" alt="promenade de nice"/>
+                    <img src="<?= SITE_DIR?>assets/img/promenade.jpg" alt="promenade de nice"/>
                 </div>
             </section>
 
@@ -247,6 +247,6 @@
             });
             carousel.mount();
         </script>
-        <script src="assets/js/modal.js"></script>
+        <script src="<?= SITE_DIR?>assets/js/modal.js"></script>
     </body>
 </html>
