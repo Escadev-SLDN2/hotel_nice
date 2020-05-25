@@ -15,12 +15,12 @@
         />
 
         <!-- Ici se trouvent les liens vers les fichiers favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest">
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+        <link rel="manifest" href="site.webmanifest"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name="theme-color" content="#ffffff"/>
 
         <!-- Ici se trouvent les liens vers les feuilles de styles -->
         <link rel="stylesheet" href="assets/css/styles.min.css" />
@@ -33,6 +33,15 @@
             <h1><a href="<?= SITE_DIR?>">CDA Hotel Nice</a></h1>
             <p>FR / <a href="<?= SITE_DIR?>/en">EN</a></p>
         </header>
+        
+        <!-- Menu -->
+        <nav>
+            <ul><li><a href="">Accueil</a></li></ul>
+            <ul><li><a href="">Chambres</a></li></ul>
+            <ul><li><a href="">Services</a></li></ul>
+            <ul><li><a href="">Tourisme</a></li></ul>
+            <ul><li><a href="">Nous trouver</a></li></ul>
+        </nav>
 
         <main>
             <!-- Carousel -->
@@ -75,7 +84,7 @@
                     </p>
                 </div>
                 <div class="block-content medium-block">
-                    <img src="assets/img/facade.jpg" alt="facade de l'hotel">
+                    <img src="assets/img/facade.jpg" alt="facade de l'hotel"/>
                 </div>
             </section>
 
@@ -112,7 +121,7 @@
                     </ul>
                 </div>
                 <div class="block-content medium-block">
-                    <img src="assets/img/promenade.jpg" alt="promenade de nice">
+                    <img src="assets/img/promenade.jpg" alt="promenade de nice"/>
                 </div>
             </section>
 
