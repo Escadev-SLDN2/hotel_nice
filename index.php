@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-define('SITE_DIR','/hotel_nice');
+define('SITE_DIR','/hotel_nice/');
 
 $requestUri = str_replace(SITE_DIR, '', $_SERVER['REQUEST_URI']);
 

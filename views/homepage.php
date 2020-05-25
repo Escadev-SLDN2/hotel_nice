@@ -31,7 +31,7 @@
         <header>
             <a href="<?= SITE_DIR?>"><img src="assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
             <h1><a href="<?= SITE_DIR?>">CDA Hotel Nice</a></h1>
-            <p>FR / <a href="<?= SITE_DIR?>/en">EN</a></p>
+            <p>FR / <a href="<?= SITE_DIR?>en">EN</a></p>
         </header>
         
         <!-- Menu -->
