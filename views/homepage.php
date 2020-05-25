@@ -188,9 +188,9 @@
             <!-- Contact -->
             <section class="row">
                 <div class="block-content large-block centered color-sand">
-                    <p>&#128222; : (+33) 04 20 69 69 69</p> 
-                    <p>&#128231; : reception@cda-nice.fr</p> 
-                    <p>&#128205; : 69 Prom. des Anglais, 06200 Nice</p>
+                    <p><i class="fas fa-phone-alt"></i> : (+33) 04 20 69 69 69</p> 
+                    <p><i class="fas fa-at"></i> : reception@cda-nice.fr</p> 
+                    <p><i class="fas fa-map-marker-alt"></i> : 69 Prom. des Anglais, 06200 Nice</p>
                 </div>
             </section>
 
