@@ -96,7 +96,7 @@
                     <p>
                         Promenade des Anglais, Négresco, jardins et parcs fleuris, plage sur mer chaude, façades colorées du centre-ville… Autant de lieux à parcourir et à découvrir sous le soleil azuréen.   
                     </p>
-                    <ul> 
+                    <ul class="ul-bullet-list"> 
                         <li>
                             La Promenade des Anglais
                         </li>

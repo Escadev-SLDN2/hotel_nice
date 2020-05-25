@@ -67,6 +67,16 @@
             margin: 0;
             padding: 0;
         }
+
+        &.ul-bullet-list{
+            li {
+                font-family: Arial, sans-serif;
+                font-size: 100%;
+                color: black;
+                display : list-item;
+                list-style-image : url(puce.gif);
+               } 
+        }
         
         img{
             
