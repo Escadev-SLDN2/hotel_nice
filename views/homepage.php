@@ -24,7 +24,6 @@
 
         <!-- Ici se trouvent les liens vers les feuilles de styles -->
         <link rel="stylesheet" href="<?= SITE_DIR?>assets/css/styles.min.css" />
-        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Ubuntu"/>
     </head>
 
     <body>
@@ -32,17 +31,19 @@
         <header>
             <a href="<?= SITE_DIR?>"><img src="<?= SITE_DIR?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
             <h1><a href="<?= SITE_DIR?>">CDA Hotel Nice</a></h1>
+            <nav>
+                <ul><li><a href="<?= SITE_DIR?>">Accueil</a></li></ul>
+                <ul><li><a href="<?= SITE_DIR?>chambre/liste">Chambres</a></li></ul>
+                <ul><li><a href="<?= SITE_DIR?>services/liste">Services</a></li></ul>
+                <ul><li><a href="<?= SITE_DIR?>tourisme/liste">Tourisme</a></li></ul>
+                <ul><li><a href="<?= SITE_DIR?>contactAcces/acces">Nous trouver</a></li></ul>
+                <ul><li><a href="<?= SITE_DIR?>contactAcces/contact">Nous contacter</a></li></ul>
+            </nav>
             <p>FR / <a href="<?= SITE_DIR?>en">EN</a></p>
         </header>
         
         <!-- Menu -->
-        <nav>
-            <ul><li><a href="">Accueil</a></li></ul>
-            <ul><li><a href="">Chambres</a></li></ul>
-            <ul><li><a href="">Services</a></li></ul>
-            <ul><li><a href="">Tourisme</a></li></ul>
-            <ul><li><a href="">Nous trouver</a></li></ul>
-        </nav>
+       
 
         <main>
             <!-- Carousel -->
