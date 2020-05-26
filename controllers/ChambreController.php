@@ -1,5 +1,6 @@
 <?php
-$pageTitle = 'Liste des chambres';
+
 function indexAction() {
+    $pageTitle = 'Liste des chambres';
     require('views/chambre/index.php');
 }

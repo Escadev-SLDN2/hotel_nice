@@ -1,4 +1,4 @@
-
+<?php require('views/templates/header.php');?>
             <!-- Carousel -->
             <section class="carousel-container">
                 <div class="glide">
@@ -139,3 +139,4 @@
                     </ul>
                 </div>
             </section>
+<?php require('views/templates/footer.php');?>
