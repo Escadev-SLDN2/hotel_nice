@@ -41,4 +41,5 @@
             </nav>
             <p>FR / <a href="<?php echo SITE_DIR;?>en">EN</a></p>
         </header>
+        
 		<main>
