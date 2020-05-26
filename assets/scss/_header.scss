@@ -26,21 +26,23 @@ body {
         }
 
         &>nav {
+			margin-left: auto;
             display: flex;
             flex-wrap: wrap;
-    
+            font-size: .8em;
+            a{
+				text-decoration: none;
+				color: $white;
+
+				&:hover, &.active {
+                color: $color_sky;
+				border-bottom:5px solid $color_sky
+            	}
+			}
+
             ul {
                 list-style-type: none;
-                a{
-                    text-decoration: none;
-                    font-size: 0.5em;
-                    color: $white;
-                    &:hover, &.active{
-                        color: $color_sky;
-                    }
-                }
             }
-            
         }
         p{
             margin-left: auto;
@@ -54,5 +56,5 @@ body {
                 }
             }
         }
-    }
+	}
 }
