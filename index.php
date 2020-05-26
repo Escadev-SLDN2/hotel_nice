@@ -14,9 +14,7 @@ $action = (!empty($requestParams[1]) ? $requestParams[1] : 'index'). 'Action';
 if (file_exists('controllers/'. $controller . '.php')) {
     require('controllers/' . $controller . '.php');
     if (function_exists($action)) {
-        require('views/templates/header.php');
         $action();
-        require('views/templates/footer.php');
     } else {
         require('404.php');
     }

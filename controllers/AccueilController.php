@@ -1,5 +1,6 @@
 <?php
-$pageTitle = 'Accueil';
+
 function indexAction() {
+    $pageTitle = 'Accueil';
     require('views/accueil/index.php');
 }
