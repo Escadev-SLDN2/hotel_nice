@@ -132,7 +132,7 @@
             <section class="row">
                 <div class="block-content small-block centered color-ocean">
                     <h2>Chambre simple :</h2>
-                    <ul>
+                    <ul class="ul-no-bullet">
                         <li>
                             Novembre-Mars : 69 €/nuit
                         </li>
@@ -146,7 +146,7 @@
                 </div>
                 <div class="block-content small-block centered color-ocean">
                     <h2>Chambre double :</h2>
-                    <ul>
+                    <ul class="ul-no-bullet">
                         <li>
                             Novembre-Mars : 71 €/nuit
                         </li>
@@ -160,7 +160,7 @@
                 </div>
                 <div class="block-content small-block centered color-ocean">
                     <h2>Chambre double avec cuisine :</h2>
-                    <ul>
+                    <ul class="ul-no-bullet">
                         <li>
                             Novembre-Mars : 93 €/nuit
                         </li>
@@ -174,7 +174,7 @@
                 </div>
                 <div class="block-content small-block centered color-ocean">
                     <h2>Chambre familiale :</h2>
-                    <ul>
+                    <ul class="ul-no-bullet">
                         <li>
                             Novembre-Mars : 159 €/nuit
                         </li>
