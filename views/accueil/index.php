@@ -23,25 +23,28 @@
         <meta name="theme-color" content="#ffffff"/>
 
         <!-- Ici se trouvent les liens vers les feuilles de styles -->
-        <link rel="stylesheet" href="<?= SITE_DIR?>assets/css/styles.min.css" />
+        <link rel="stylesheet" href="<?php echo SITE_DIR;?>assets/css/styles.min.css" />
+        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Ubuntu"/>
     </head>
 
     <body>
         <!-- Header -->
         <header>
-            <a href="<?= SITE_DIR?>"><img src="<?= SITE_DIR?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
-            <h1><a href="<?= SITE_DIR?>">CDA Hotel Nice</a></h1>
-            <p>FR / <a href="<?= SITE_DIR?>en">EN</a></p>
+            <a href="<?php echo SITE_DIR;?>"><img src="<?php echo SITE_DIR;?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
+            <h1><a href="<?php echo SITE_DIR;?>">CDA Hotel Nice</a></h1>
+            <nav>
+                <ul><li><a href="<?php echo SITE_DIR;?>">Accueil</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>chambre/liste">Chambres</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>services/liste">Services</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>tourisme/liste">Tourisme</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>contactAcces/acces">Nous trouver</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>contactAcces/contact">Nous contacter</a></li></ul>
+            </nav>
+            <p>FR / <a href="<?php echo SITE_DIR;?>en">EN</a></p>
         </header>
         
         <!-- Menu -->
-        <nav>
-            <ul><li><a href="">Accueil</a></li></ul>
-            <ul><li><a href="">Chambres</a></li></ul>
-            <ul><li><a href="">Services</a></li></ul>
-            <ul><li><a href="">Tourisme</a></li></ul>
-            <ul><li><a href="">Nous trouver</a></li></ul>
-        </nav>
+       
 
         <main>
             <!-- Carousel -->
@@ -50,13 +53,13 @@
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             <li class="glide__slide">
-                                <img src="<?= SITE_DIR?>assets/img/hotel.jpg" width="100%" />
+                                <img src="<?php echo SITE_DIR;?>assets/img/hotel.jpg" width="100%" />
                             </li>
                             <li class="glide__slide">
-                                <img src="<?= SITE_DIR?>assets/img/resort.jpg" width="100%" />
+                                <img src="<?php echo SITE_DIR;?>assets/img/resort.jpg" width="100%" />
                             </li>
                             <li class="glide__slide">
-                                <img src="<?= SITE_DIR?>assets/img/breakfast.jpg" width="100%" />
+                                <img src="<?php echo SITE_DIR;?>assets/img/breakfast.jpg" width="100%" />
                             </li>
                         </ul>
                     </div>
@@ -84,7 +87,7 @@
                     </p>
                 </div>
                 <div class="block-content medium-block">
-                    <img src="<?= SITE_DIR?>assets/img/facade.jpg" alt="facade de l'hotel"/>
+                    <img src="<?php echo SITE_DIR;?>assets/img/facade.jpg" alt="facade de l'hotel"/>
                 </div>
             </section>
 
@@ -121,7 +124,7 @@
                     </ul>
                 </div>
                 <div class="block-content medium-block">
-                    <img src="<?= SITE_DIR?>assets/img/promenade.jpg" alt="promenade de nice"/>
+                    <img src="<?php echo SITE_DIR;?>assets/img/promenade.jpg" alt="promenade de nice"/>
                 </div>
             </section>
 
@@ -247,6 +250,6 @@
             });
             carousel.mount();
         </script>
-        <script src="<?= SITE_DIR?>assets/js/modal.js"></script>
+        <script src="<?php echo SITE_DIR;?>assets/js/modal.js"></script>
     </body>
 </html>

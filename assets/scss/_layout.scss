@@ -3,7 +3,6 @@
 @import "content";
 @import "footer";
 @import "modal";
-@import "nav";
 body {
     margin: 0;
     background-color: $white;
@@ -12,6 +11,7 @@ body {
     background-attachment: fixed;
     background-size: contain;
     background-position: center bottom;
+	font-family: $default-font, Arial;
     h2 {
         font-size: 1.1em;
     }
