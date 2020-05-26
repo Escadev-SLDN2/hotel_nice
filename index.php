@@ -18,15 +18,9 @@ if (file_exists('controllers/'. $controller . '.php')) {
         $action();
         require('views/templates/footer.php');
     } else {
-        $pageTitle = 'Erreur 404';
-        require('views/templates/header.php');
         require('404.php');
-        require('views/templates/footer.php');
     }
 } else {
-    $pageTitle = 'Erreur 404';
-    require('views/templates/header.php');
     require('404.php');
-    require('views/templates/footer.php');
 }
 
