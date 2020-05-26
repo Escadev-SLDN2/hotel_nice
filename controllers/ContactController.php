@@ -1,10 +1,10 @@
 <?php
-$pageTitle = 'Nous trouver';
+$pageTitle = 'Nous Contacter';
 function contactAction() {
     require('views/contact/contact.php');
 }
 
-$pageTitle = 'Nous Contacter';
+$pageTitle = 'Nous trouver';
 function accesAction() {
     require('views/contact/acces.php');
 }

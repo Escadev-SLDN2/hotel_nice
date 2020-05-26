@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Nous trouver';
+$pageTitle = 'Liste des services';
 function indexAction() {
     require('views/services/index.php');
 }
