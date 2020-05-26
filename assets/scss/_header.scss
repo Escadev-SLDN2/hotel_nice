@@ -29,7 +29,13 @@ body {
 			margin-left: auto;
             display: flex;
             flex-wrap: wrap;
-            font-size: .8em;
+            font-size: .5em;
+			@include responsive('lg'){
+				font-size: .8em;
+			}
+			@include responsive('xs'){
+				display: none;	
+			}
             a{
 				text-decoration: none;
 				color: $white;
