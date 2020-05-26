@@ -1,9 +1,7 @@
-
-php/config.conf
+config/bdd.php
 .vscode
 .idea
 .workspace
 .codelite
 *.code-workspace
-*.min.css
-*.min.css.map
+assets/css
