@@ -52,17 +52,6 @@
 
         <!-- Script Javascript -->
         <script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
-		<?php if($controller == 'AccueilController'){ ?>
-        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-        <script>
-            let carousel = new Glide(".glide", {
-                type: "carousel",
-                startAt: 0,
-                autoplay: 5000
-            });
-            carousel.mount();
-        </script>
-		<?php } ?>
         <script src="<?php echo SITE_DIR;?>assets/js/modal.js"></script>
     </body>
 </html>

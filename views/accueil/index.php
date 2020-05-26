@@ -139,4 +139,13 @@
                     </ul>
                 </div>
             </section>
+			<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+			<script>
+				let carousel = new Glide(".glide", {
+					type: "carousel",
+					startAt: 0,
+					autoplay: 5000
+				});
+				carousel.mount();
+			</script>
 <?php require('views/templates/footer.php');?>

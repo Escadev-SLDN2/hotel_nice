@@ -23,8 +23,9 @@
         <meta name="theme-color" content="#ffffff"/>
 
         <!-- Ici se trouvent les liens vers les feuilles de styles -->
+		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Ubuntu"/>
         <link rel="stylesheet" href="<?php echo SITE_DIR;?>assets/css/styles.min.css" />
-        <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Ubuntu"/>
+        
     </head>
 
     <body>
