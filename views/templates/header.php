@@ -25,6 +25,9 @@
         <!-- Ici se trouvent les liens vers les feuilles de styles -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"/>
         <link rel="stylesheet" href="<?php echo SITE_DIR;?>assets/css/styles.min.css" />
+
+        <!-- Script Javascript -->
+        <script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
         
     </head>
 
