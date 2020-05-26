@@ -1,4 +1,4 @@
 <?php
 function indexAction() {
-    require('views/Services/services.php');
+    require('views/services/index.php');
 }
