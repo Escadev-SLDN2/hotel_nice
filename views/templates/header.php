@@ -33,11 +33,11 @@
             <h1><a href="<?php echo SITE_DIR;?>">CDA Hotel Nice</a></h1>
             <nav>
                 <ul><li><a href="<?php echo SITE_DIR;?>">Accueil</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>chambre/liste">Chambres</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>services/liste">Services</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>tourisme/liste">Tourisme</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>contactAcces/acces">Nous trouver</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>contactAcces/contact">Nous contacter</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>chambre/">Chambres</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>services/">Services</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>tourisme/">Tourisme</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>contact/acces">Nous trouver</a></li></ul>
+                <ul><li><a href="<?php echo SITE_DIR;?>contact/contact">Nous contacter</a></li></ul>
             </nav>
             <p>FR / <a href="<?php echo SITE_DIR;?>en">EN</a></p>
         </header>
