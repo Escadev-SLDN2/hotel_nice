@@ -51,7 +51,6 @@
         </div>
 
         <!-- Script Javascript -->
-        <script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
         <script src="<?php echo SITE_DIR;?>assets/js/modal.js"></script>
     </body>
 </html>
