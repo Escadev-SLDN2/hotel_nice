@@ -1,0 +1,7 @@
+.chambre{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.photo{
+    flex-shrink: 0;
+}
