@@ -16,7 +16,7 @@ body {
         
 		.burger{
 			font-size: 2rem;
-			margin: 20px;
+			margin: auto;
 			color: $white;
 			@include responsive('sm'){
 				display: none;
@@ -88,8 +88,10 @@ body {
 			@include responsive('xs'){
 				display: none;
 				order: 1;
-				margin-right: auto;
+				margin: auto;
+				flex-basis: 100%;
 				ul{
+					text-align: center;
 					li{
 						display: block;
 						margin: 10px 0 10px 0;
