@@ -4,15 +4,15 @@
     <h1>Liste des chambres</h1>
 
     <?php foreach ($chambres as $chambre) : ?>
-        <section class="chambre">
-            <div class="photo">
-                <img src="<?php echo SITE_DIR; ?>assets/img/<?php echo $chambre['img']; ?>" alt="<?php echo $chambre['type']; ?>" />
-            </div>
-            <div class="informations">
+        <section class="row reverse">
+            <div class="block-content large-block color-sky">
                 <h2><?php echo $chambre['type']; ?></h2>
                 <div class="description">
                     <?php echo $chambre['description']; ?>
                 </div>
+            </div>
+			<div class="block-content medium-block">
+                <img src="<?php echo SITE_DIR; ?>assets/img/<?php echo $chambre['img']; ?>" alt="<?php echo $chambre['type']; ?>" />
             </div>
         </section>
     <?php endforeach; ?>
