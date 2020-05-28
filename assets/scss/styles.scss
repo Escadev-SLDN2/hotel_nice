@@ -1,5 +1,10 @@
+//base imports
 @import "variables/fonts";
 @import "variables/colors";
 @import "helpers/mixins";
 
+//layout imports
 @import "layout";
+
+//pages imports
+@import "chambre";
