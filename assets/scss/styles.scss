@@ -3,6 +3,14 @@
 @import "variables/colors";
 @import "helpers/mixins";
 
+// components imports
+@import "carousel";
+@import "header";
+@import "content";
+@import "footer";
+@import "modal";
+@import "table";
+
 //layout imports
 @import "layout";
 
