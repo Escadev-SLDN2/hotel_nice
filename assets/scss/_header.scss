@@ -56,7 +56,6 @@ body {
 
         &>nav {
 			margin-left: auto;
-            display: flex;
             flex-wrap: wrap;
 			font-weight: bold;
             a{
@@ -83,10 +82,11 @@ body {
 			}
 			@include responsive('md'){
 				font-size: 1.2rem;
-				
+				display: flex;
 			}
 			@include responsive('lg'){
 				font-size: 1.4rem;
+				display: flex;
 			}
 			@include responsive('xs'){
 				display: none;
