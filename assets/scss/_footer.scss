@@ -8,5 +8,9 @@ body {
         background-color: $color_sand;
         margin-top: 30px;
         padding: 10px 10vh;
+		@include responsive('xs'){
+			flex-wrap: wrap;
+			height: auto;
+		}
     }
 }

@@ -5,19 +5,40 @@ body {
         align-items: center;
         height: 110px;
         background-color: $color_cloud;
-        
+        @include responsive('xs'){
+			flex-wrap: wrap;
+			height: auto;
+		}
 
         a{
             max-height: 90px;
         }
         
+		.burger{
+			font-size: 2rem;
+			margin: 20px;
+			color: $white;
+			@include responsive('sm'){
+				display: none;
+			}
+			@include responsive('xs'){
+				display: inline;
+			}
+		}
+		
         img{
             margin-left: 20px;
+			@include responsive('xs'){
+				margin-left: 5px;	
+			}
         }
 
         h1 {
             font-family: $font-title;
             margin-left: 20px;
+			@include responsive('xs'){
+				margin-left: 5px;	
+			}
 			@include responsive('sm'){
 				font-size: 1rem;
 			}
@@ -38,18 +59,6 @@ body {
             display: flex;
             flex-wrap: wrap;
 			font-weight: bold;
-			@include responsive('sm'){
-				font-size: 0.8rem;
-			}
-			@include responsive('md'){
-				font-size: 1.2rem;
-			}
-			@include responsive('lg'){
-				font-size: 1.4rem;
-			}
-			@include responsive('xs'){
-				display: none;	
-			}
             a{
 				text-decoration: none;
 				color: $white;
@@ -64,11 +73,37 @@ body {
                 list-style-type: none;
 				li{
 					display: inline;
-					margin: 0 10px 0 10px
+					margin: 0 10px 0 10px;
 				}
             }
+			
+			@include responsive('sm'){
+				font-size: 0.8rem;
+				display: flex;
+			}
+			@include responsive('md'){
+				font-size: 1.2rem;
+				
+			}
+			@include responsive('lg'){
+				font-size: 1.4rem;
+			}
+			@include responsive('xs'){
+				display: none;
+				order: 1;
+				margin-right: auto;
+				ul{
+					li{
+						display: block;
+						margin: 10px 0 10px 0;
+					}
+				}
+			}
         }
         p{
+			@include responsive('xs'){
+				display: none;	
+			}
             margin-left: auto;
             margin-right: 20px;
             a {
