@@ -78,15 +78,12 @@ body {
 			
 			@include responsive('sm'){
 				font-size: 0.8rem;
-				display: flex;
 			}
 			@include responsive('md'){
 				font-size: 1.2rem;
-				display: flex;
 			}
 			@include responsive('lg'){
 				font-size: 1.4rem;
-				display: flex;
 			}
 			@include responsive('xs'){
 				display: none;

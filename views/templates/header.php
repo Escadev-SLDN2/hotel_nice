@@ -32,7 +32,7 @@
 			function burger() {
 			  let nav = document.getElementById("mainNav");
 			  if (nav.style.display === "inline") {
-				 nav.style.display = "none";
+				 nav.style.display = "";
 			  } else {
 				nav.style.display = "inline";
 			  }
