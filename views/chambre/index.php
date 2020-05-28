@@ -10,6 +10,13 @@
                 <div class="description">
                     <?php echo $chambre['description']; ?>
                 </div>
+                <div class="tarif">
+                    <?php echo $chambre['tarif1']; ?> / <?php echo $chambre['tarif2']; ?> / <?php echo $chambre['tarif3']; ?>
+                </div>
+                <div class="etat-reserv">
+                    <?php echo $chambre['etat']; ?>
+                    <button type="button" id="btnReserv">Administration</button>
+                </div>
             </div>
 			<div class="block-content medium-block">
                 <img src="<?php echo SITE_DIR; ?>assets/img/<?php echo $chambre['img']; ?>" alt="<?php echo $chambre['type']; ?>" />
