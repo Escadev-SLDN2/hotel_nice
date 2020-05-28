@@ -48,6 +48,10 @@ body {
 
             ul {
                 list-style-type: none;
+				li{
+					display: inline;
+					margin: 0 10px 0 10px
+				}
             }
         }
         p{

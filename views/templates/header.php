@@ -36,12 +36,14 @@
             <a href="<?php echo SITE_DIR;?>"><img src="<?php echo SITE_DIR;?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
             <h1><a href="<?php echo SITE_DIR;?>">CDA Hotel Nice</a></h1>
             <nav>
-                <ul><li><a href="<?php echo SITE_DIR;?>">Accueil</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>chambre/">Chambres</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>services/">Services</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>tourisme/">Tourisme</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>contact/acces">Nous trouver</a></li></ul>
-                <ul><li><a href="<?php echo SITE_DIR;?>contact/contact">Nous contacter</a></li></ul>
+                <ul>
+					<li><a href="<?php echo SITE_DIR;?>">Accueil</a></li>
+					<li><a href="<?php echo SITE_DIR;?>chambre/">Chambres</a></li>
+					<li><a href="<?php echo SITE_DIR;?>services/">Services</a></li>
+					<li><a href="<?php echo SITE_DIR;?>tourisme/">Tourisme</a></li>
+					<li><a href="<?php echo SITE_DIR;?>contact/acces">Nous trouver</a></li>
+					<li><a href="<?php echo SITE_DIR;?>contact/contact">Nous contacter</a></li>
+				</ul>
             </nav>
             <p>FR / <a href="<?php echo SITE_DIR;?>en">EN</a></p>
         </header>
