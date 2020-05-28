@@ -6,7 +6,7 @@
     <?php foreach ($chambres as $chambre) : ?>
         <section class="row reverse">
             <div class="block-content large-block color-sky">
-                <h2><?php echo $chambre['type']; ?></h2>
+                <h2><?php echo ucfirst($chambre['type']); ?></h2>
                 <div class="description">
                     <?php echo $chambre['description']; ?>
                 </div>
