@@ -3,7 +3,7 @@
 <div class="container">
     <h1>Modifier la <?php echo $chambre['type']; ?></h1>
 
-    <form>
+    <form method="post">
         <div class="form_row">
             <label for="txt_type">Type</label>
             <input type="text" name="txt_type" id="txt_type" value="<?php echo $chambre['type']; ?>" required />
