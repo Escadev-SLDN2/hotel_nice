@@ -19,7 +19,7 @@
         position: relative;
 		@include responsive('xs'){
 			margin: 2rem 0;
-		}
+        }
         &.small-block {
             flex-grow: 0;
             flex-shrink: 0;
@@ -80,7 +80,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         img{
             
             position: absolute;
@@ -90,10 +90,8 @@
 			@include responsive('xs'){
 			}
         }
+
 		
-		&:has(table){
-			overflow: scroll;	
-		}
     }
     .button {
         margin-left: 1vw;
