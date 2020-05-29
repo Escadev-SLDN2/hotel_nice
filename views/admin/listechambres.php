@@ -1,4 +1,4 @@
-<?php require('views/templates/header.php');?>
+<?php require('views/admin/templates/header.php');?> 
 
 <div class="container">
     <h1>Liste des chambres</h1>
@@ -34,4 +34,5 @@
     </table>
 </div>
 
-<?php require('views/templates/footer.php');?>
+<?php require('views/admin/templates/footer.php');?>
+

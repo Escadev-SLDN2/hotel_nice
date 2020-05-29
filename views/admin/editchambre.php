@@ -1,4 +1,4 @@
-<?php require('views/templates/header.php');?>
+<?php require('views/admin/templates/header.php');?>   
 
 <div class="container">
     <h1>Modifier la <?php echo $chambre['type']; ?></h1>
@@ -14,4 +14,4 @@
     </form>
 </div>
 
-<?php require('views/templates/footer.php');?>
+<?php require('views/admin/templates/footer.php');?>
