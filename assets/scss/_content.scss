@@ -61,6 +61,34 @@
             color: $white;
 
         }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .tarif,
+        .etat-reserv {
+            text-align: right;
+
+            .valid {
+                padding: 6px 18px;
+                color: $valid;
+                background-color: $white_t;
+                border: $color-ocean_t solid;
+            }
+
+            .unvalid {
+                padding: 6px 18px;
+                color: $unvalid;
+                background-color: $white_t;
+                border: $color-ocean_t solid;
+            }
+
+            button {
+                padding: 6px 18px;
+                margin-left: 4vh
+            }
+        }
         
         .ul-no-bullet{
             list-style-type: none;

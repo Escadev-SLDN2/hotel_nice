@@ -5,18 +5,18 @@
 
     <?php foreach ($chambres as $chambre) : ?>
         <section class="row reverse">
-            <div class="block-content large-block color-sky">
+            <div class="block-content large-block span-bold color-sky">
 
                 <!--Type de Chambre-->
                 <h2><?php echo ucfirst($chambre['type']); ?></h2>
 
                 <!--Description-->
-                <div class="description">
+                <div>
                     <?php echo $chambre['description']; ?>
                 </div>
 
                 <!--Service-->
-                <div class="tarif">
+                <div>
                     <ul><span class="bold">Services :</span>
                     <?php
                     $services = explode(';', $chambre['services']); 
@@ -33,10 +33,13 @@
                     <span class="bold">/ Haute saison :</span> <?php echo number_format($chambre['tarif3'], 0, ',', ' '); ?> &euro;</p>
                 </div>
 
-                <!--Image-->
+                <!--Réservation -->
                 <div class="etat-reserv">
-                    <?php echo $chambre['etat']; ?>
-                    <button type="button" id="btnReserv">Réserver</button>
+                    <?php if ($chambre['etat'] == 'disponible') {
+                        echo "<span class='bold valid'>" . ucfirst($chambre['etat']) . "</span>";
+                        } else {
+                        echo "<span class='bold unvalid'>" . ucfirst($chambre['etat']) . "</span>"; } ?>
+                    <button class="btn-reserv" type="button" id="btnReserv">Réserver</button>
                 </div>
 
             </div>
