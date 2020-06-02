@@ -69,31 +69,59 @@
 
         }
 
-        .bold {
-            font-weight: bold;
-        }
-
         .tarif,
-        .etat-reserv {
+        .etat-reserv
+        {
             text-align: right;
+            font-weight: bold;
 
-            .valid {
+            .season
+            {
+                margin: 0 0 1vh 2vh;
+                display: inline-block;
                 padding: 6px 18px;
-                color: $valid;
                 background-color: $white_t;
-                border: $color-ocean_t solid;
+                border-radius: 20px;
+
+                &.low {
+                    border-top: $low solid;
+                    border-bottom: $low solid;
+                }
+    
+                &.moderate {
+                    border-top: $moderate solid;
+                    border-bottom: $moderate solid;
+                }
+    
+                &.hot {
+                    border-top: $hot solid;
+                    border-bottom: $hot solid;
+                }
             }
 
-            .unvalid {
+            .result
+            {
+                display: inline-block;
                 padding: 6px 18px;
-                color: $unvalid;
                 background-color: $white_t;
-                border: $color-ocean_t solid;
+
+                &.valid {
+                    color: $valid;
+                    border-top: $valid solid;
+                    border-bottom: $valid solid;
+                }
+    
+                &.unvalid {
+                    color: $unvalid;
+                    border-top: $unvalid solid;
+                    border-bottom: $unvalid solid;
+                }
             }
 
             button {
+                display: inline-block;
                 padding: 6px 18px;
-                margin-left: 4vh
+                margin-left: 4vh;
             }
         }
         

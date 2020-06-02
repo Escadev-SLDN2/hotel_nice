@@ -16,7 +16,7 @@
                 </div>
 
                 <!--Service-->
-                <div>
+                <div class="">
                     <ul><span class="bold">Services :</span>
                     <?php
                     $services = explode(';', $chambre['services']); 
@@ -28,18 +28,22 @@
 
                 <!--Saisons et Tarif-->
                 <div class="tarif">
-                    <p><span class="bold">Basse saison</span> <?php echo number_format($chambre['tarif1'], 0, ',', ' '); ?> &euro;
-                    <span class="bold">/ Moyenne saison :</span> <?php echo number_format($chambre['tarif2'], 0, ',', ' '); ?> &euro;
-                    <span class="bold">/ Haute saison :</span> <?php echo number_format($chambre['tarif3'], 0, ',', ' '); ?> &euro;</p>
+                    <p>
+                        <?php echo "<span class='season low'> Basse saison : " . number_format($chambre['tarif1'], 0, ',', ' ') . "&euro; </span>"; ?> 
+                        <?php echo "<span class='season moderate'> Moyenne saison : " . number_format($chambre['tarif2'], 0, ',', ' ') . "&euro; </span>"; ?>
+                        <?php echo "<span class='season hot'> Haute saison : " . number_format($chambre['tarif3'], 0, ',', ' ') . "&euro; </span>"; ?>
+                    </p>
                 </div>
 
                 <!--Réservation -->
                 <div class="etat-reserv">
-                    <?php if ($chambre['etat'] == 'disponible') {
-                        echo "<span class='bold valid'>" . ucfirst($chambre['etat']) . "</span>";
-                        } else {
-                        echo "<span class='bold unvalid'>" . ucfirst($chambre['etat']) . "</span>"; } ?>
-                    <button class="btn-reserv" type="button" id="btnReserv">Réserver</button>
+                    <p>
+                        <?php if ($chambre['etat'] == 'disponible') {
+                            echo "Etat : <span class='result valid'>" . ucfirst($chambre['etat']) . "</span>";
+                            } else {
+                            echo "Etat : <span class='result unvalid'>" . ucfirst($chambre['etat']) . "</span>"; } ?>
+                        <button class="btn-reserv" type="button" id="btnReserv">Réserver</button>
+                    </p>
                 </div>
 
             </div>
