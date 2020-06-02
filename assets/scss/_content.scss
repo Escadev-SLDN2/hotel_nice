@@ -22,10 +22,17 @@
             flex-grow: 1;
             flex-basis: 0;
             flex-shrink: 0;
+			@include responsive('xs'){
+				order: -1;
+				flex-basis: 100%;	
+			}
         }
         &.large-block {
             flex-grow: 2;
             flex-basis: 0;
+			@include responsive('xs'){
+				flex-basis: 100%;	
+			}
         }
 
         &.margin-left-side{
@@ -102,6 +109,8 @@
             left: 50%;
             top: 50%;
             transform: scale(0.33) translate(-150%,-150%);
+			@include responsive('xs'){
+			}
         }
     }
     .button {
