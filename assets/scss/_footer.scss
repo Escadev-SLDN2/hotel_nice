@@ -11,6 +11,21 @@ body {
 		@include responsive('xs'){
 			flex-wrap: wrap;
 			height: auto;
-		}
+        }
+        
+        button {
+            display: inline-block;
+            padding: 6px 5vh;
+            background-color: $white_t;
+            border: $white_t solid;
+
+            &:hover {
+                background-color: $white;
+            }
+
+            &:active {
+                background-color: $color_sand_t;
+            }
+        }
     }
 }
