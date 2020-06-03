@@ -11,16 +11,30 @@ body {
     background-attachment: fixed;
     background-size: contain;
     background-position: center bottom;
-	font-family: $default-font, Arial;
+    font-family: $default-font, Arial;
+
+    h1{
+        margin-top: 0;
+        font-size: 1.5em;
+        padding: 25px 0;
+        background-color: $color_sky;
+        border-top: $color_ocean solid;
+        border-bottom: $color_ocean solid 10px;
+        color: $white;
+        text-align: center;
+    }
+
     h2 {
         font-size: 1.1em;
         display: inline-block;
         padding: 6px 18px;
-        background-color: $white_t;
+        color: $white;
+        background-color: $color_ocean_t;
         border-top: $color_ocean solid;
         border-bottom: $color_ocean solid;
         border-radius: 20px;
     }
+
     h3 {
         font-size: 1.1em;
     }

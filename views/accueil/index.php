@@ -1,4 +1,5 @@
 <?php require('views/templates/header.php');?>
+
             <!-- Carousel -->
             <section class="carousel-container">
                 <div class="glide">
@@ -21,6 +22,8 @@
                     </div>
                 </div>
             </section>
+
+            <h1>Accueil</h1>
 
             <!-- Content -->
             <section class="row">

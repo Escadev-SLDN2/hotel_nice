@@ -1,7 +1,7 @@
 <?php require('views/templates/header.php'); ?>
 
+<h1>Chambres</h1>
 <div class="container">
-    <h1>Liste des chambres</h1>
 
     <?php foreach ($chambres as $chambre) : ?>
         <section class="row reverse">
