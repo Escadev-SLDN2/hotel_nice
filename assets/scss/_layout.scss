@@ -9,5 +9,15 @@ body {
 	font-family: $default-font, Arial;
     h2 {
         font-size: 1.1em;
+        display: inline-block;
+        padding: 6px 18px;
+        background-color: $white_t;
+        border-top: $color_ocean solid;
+        border-bottom: $color_ocean solid;
+        border-radius: 20px;
     }
+    h3 {
+        font-size: 1.1em;
+    }
+
 }
