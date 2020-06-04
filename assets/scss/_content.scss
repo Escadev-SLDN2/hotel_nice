@@ -3,6 +3,9 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0 2vh;
+	@include responsive('xs'){
+		margin: 0;
+	}
     &.reverse {
         flex-direction: row-reverse;
     }
@@ -11,9 +14,12 @@
         border-radius: 0.8vw;
         min-height: 10vh;
         margin: 2vh 2vh;
-        padding: 4vh 2vh;
+        padding: 4rem 2rem;
         overflow: hidden;
         position: relative;
+		@include responsive('xs'){
+			margin: 2rem 0;
+        }
         &.small-block {
             flex-grow: 0;
             flex-shrink: 0;
@@ -74,7 +80,7 @@
             margin: 0;
             padding: 0;
         }
-        
+
         img{
             
             position: absolute;
@@ -84,6 +90,8 @@
 			@include responsive('xs'){
 			}
         }
+
+		
     }
     .button {
         margin-left: 1vw;
@@ -105,4 +113,7 @@
 
 .container{
     padding: 0 2rem;
+	@include responsive('xs'){
+		padding: 0;
+	}
 }
