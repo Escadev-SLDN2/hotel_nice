@@ -6,24 +6,18 @@
 @import "side-nav";
 @import "content";
 @import "formulaire";
+@import "layout";
+@import "table";
 body {
-  margin: 0;
-  background-color: $white;
-  background-image: url(../img/logonicetr2.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
-  background-position: center bottom;
-  
-  &>header{
-    position: fixed;
-	width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
+    &>header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
 
-  main{
-    margin-top: 110px;
-  }
+    main{
+      	margin-top: 150px;
+    }
 }

@@ -43,7 +43,7 @@
     <header>
         <a href="index.html"><img src="../assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
         <h1><a href="index.html">Administration</a></h1>
-        <nav>
+        <nav id="mainNav">
 			<ul>
 				<li><a href="">Tableau de bord</a></li>
 				<li><a href="">R&eacute;servations</a></li>
