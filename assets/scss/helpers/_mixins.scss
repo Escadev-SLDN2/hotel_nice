@@ -12,7 +12,7 @@
         @content;
         }
     } @else if $device == lg {
-        @media (min-width: 1200px) {
+        @media (min-width: 1920px) {
         @content;
         }
     }

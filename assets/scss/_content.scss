@@ -3,6 +3,9 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0 2vh;
+	@include responsive('xs'){
+		margin: 0;
+	}
     &.reverse {
         flex-direction: row-reverse;
     }
@@ -11,9 +14,12 @@
         border-radius: 0.8vw;
         min-height: 10vh;
         margin: 2vh 2vh;
-        padding: 4vh 2vh;
+        padding: 4rem 2rem;
         overflow: hidden;
         position: relative;
+		@include responsive('xs'){
+			margin: 2rem 0;
+        }
         &.small-block {
             flex-grow: 0;
             flex-shrink: 0;
@@ -22,10 +28,17 @@
             flex-grow: 1;
             flex-basis: 0;
             flex-shrink: 0;
+			@include responsive('xs'){
+				order: -1;
+				flex-basis: 100%;	
+			}
         }
         &.large-block {
             flex-grow: 2;
             flex-basis: 0;
+			@include responsive('xs'){
+				flex-basis: 100%;	
+			}
         }
 
         &.margin-left-side{
@@ -44,38 +57,137 @@
         }
 
         &.color-sky {
-            border: solid $color-sky;
-            background-color: $color-sky_t;
+            border: $color_ocean solid;
+            border-right: $color_ocean solid 10px;
+            border-bottom: $color_ocean solid 10px;
+            background-color: $color_sky_t;
         }
         &.color-sand {
-            border: solid $color-sand;
-            background-color: $color-sand_t;
+            border: solid $color_sand;
+            background-color: $color_sand_t;
         }
         &.color-cloud {
-            border: solid $color-cloud;
-            background-color: $color-cloud_t;
+            border: solid $color_cloud;
+            background-color: $color_cloud_t;
         }
         &.color-ocean {
-            border: solid $color-ocean;
-            background-color: $color-ocean_t;
+            border: solid $color_ocean;
+            background-color: $color_ocean_t;
             color: $white;
-
         }
+
+        // Pour la page "Chambres" (1/2)
+        .service {
+            margin: 30px 0 50px 0;
+
+            .h-service {
+                display: inline-block;
+                margin: 0 1vw 1vh 0;
+                padding: 2px 2vw;
+                background-color: $white_t;
+                font-weight: bold;
+            }
+
+            .li-service {
+                display: inline-block;
+                margin: 0 0 1vh 1vw;
+                padding: 4px 10px;
+                background-color: $white_t;
+                border-radius: 20px;
+            }
+        }
+
+        // Pour la page "Chambres" (2/2)
+        .tarif,
+        .etat-reserv
+        {
+            text-align: right;
+            font-weight: bold;
+
+            .season
+            {
+                margin: 0 0 1vh 2vw;
+                display: inline-block;
+                padding: 6px 18px;
+                background-color: $white_t;
+                border-radius: 20px;
+
+                &.low {
+                    border-top: $low solid;
+                    border-bottom: $low solid;
+                }
+    
+                &.moderate {
+                    border-top: $moderate solid;
+                    border-bottom: $moderate solid;
+                }
+    
+                &.hot {
+                    border-top: $hot solid;
+                    border-bottom: $hot solid;
+                }
+            }
+
+            .result
+            {
+                display: inline-block;
+                margin: 0 0 1vh 2vh;
+                padding: 6px 18px;
+                background-color: $white_t;
+
+                &.valid {
+                    color: $valid;
+                    border-top: $valid solid;
+                    border-bottom: $valid solid;
+                }
+    
+                &.unvalid {
+                    color: $unvalid;
+                    border-top: $unvalid solid;
+                    border-bottom: $unvalid solid;
+                }
+            }
+
+            button {
+                display: inline-block;
+                padding: 6px 10vh;
+                margin-left: 4vh;
+                font-size: 1.1em;
+                color: $white;
+                background-color: $color_ocean_t;
+                border: $color_ocean solid;
+
+                &:hover {
+                    color: $black;
+                    background-color: $white_t;
+                }
+
+                &:active {
+                    color: $white;
+                    background-color: $color_ocean_t;
+                }
+            }
+        } // Pour la page "Chambres" (Fin)
         
-        ul{
+        .ul-no-bullet{
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
-        
+
         img{
             
             position: absolute;
             left: 50%;
             top: 50%;
             transform: scale(0.33) translate(-150%,-150%);
+			@include responsive('xs'){
+			}
         }
+
+		
     }
+    
     .button {
         margin-left: 1vw;
         margin-top: 1em;
@@ -89,7 +201,12 @@
         &.button_ocean{
             background-color:$color_ocean;
             color: $white;
-            
         }   
+    }
+}
+
+.container{
+    @include responsive('md') {
+        padding: 0 2rem;
     }
 }
