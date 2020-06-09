@@ -30,12 +30,12 @@
         <script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
         <script>
 			function burger() {
-			  let nav = document.getElementById("mainNav");
-			  if (nav.style.display === "inline") {
-				 nav.style.display = "";
-			  } else {
-				nav.style.display = "inline";
-			  }
+				let nav = document.getElementById("mainNav");
+				if (nav.style.display === "inline") {
+					nav.style.display = "";
+				} else {
+					nav.style.display = "inline";
+				}
 			}
 		</script>
     </head>
@@ -43,7 +43,7 @@
     <body>
 		<header>
             <a href="<?php echo SITE_DIR;?>"><img src="<?php echo SITE_DIR;?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
-            <h1><a href="<?php echo SITE_DIR;?>">CDA Hotel Nice</a></h1>
+            <span class="title"><a href="<?php echo SITE_DIR;?>">CDA Hotel Nice</a></span>
             <nav id='mainNav'>
                 <ul>
 					<li><a href="<?php echo SITE_DIR;?>">Accueil</a></li>

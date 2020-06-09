@@ -33,9 +33,10 @@ body {
 			}
         }
 
-        h1 {
+        .title {
             font-family: $font-title;
-            margin-left: 20px;
+			margin-left: 20px;
+			font-weight: bold;
 			@include responsive('xs'){
 				margin-left: 5px;	
 			}

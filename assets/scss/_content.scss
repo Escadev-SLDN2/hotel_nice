@@ -57,7 +57,9 @@
         }
 
         &.color-sky {
-            border: solid $color_sky;
+            border: $color_ocean solid;
+            border-right: $color_ocean solid 10px;
+            border-bottom: $color_ocean solid 10px;
             background-color: $color_sky_t;
         }
         &.color-sand {
