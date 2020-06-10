@@ -19,8 +19,24 @@ function editchambreAction() {
     $chambre = $chambreObject->getChambre($chambreId);
 
     if( isset( $_POST['editchambre'] ) ) {
+
+        $chambreEtat        = htmlspecialchars( $_POST['txt_etat'] );
+        $chambreType        = htmlspecialchars( $_POST['txt_type'] );
+        $chambreTarif1      = htmlspecialchars( $_POST['txt_tarif1'] );
+        $chambreTarif2      = htmlspecialchars( $_POST['txt_tarif2'] );
+        $chambreTarif3      = htmlspecialchars( $_POST['txt_tarif3'] );
+
+        $params = array(
+            'etat'    => $chambreEtat,
+            'type'    => $chambreType,
+            'tarif1'  => $chambreTarif1,
+            'tarif2'  => $chambreTarif2,
+            'tarif3'  => $chambreTarif3,
+        );
+
         $chambreObject->changeChambre( $chambreId );
-        header( 'Location: ' . BASE_URL . 'admin/editchambre/' . $chambre['id'] . '' );
+        header( 'Location: ' . SITE_DIR . 'admin/editchambre/' . $chambre['id'] . '' );
+
     }
 
     $pageTitle = 'Modifier une chambre';
