@@ -33,6 +33,8 @@
 
 				<tfoot></tfoot>
 			</table>
+			<hr/>
+			<a href="<?php echo SITE_DIR; ?>admin/ajoutchambre/<?php echo $chambre['id']; ?>">Ajouter un type de chambre<i class="fas fa-edit"></i></a>
 		</div>
 	</section>
     
