@@ -20,10 +20,11 @@ class Chambre
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
     }
 
-    public function changeChambre($chambreId)
+    public function changeChambre($params)
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
         $result = $connection->prepare('UPDATE chambres SET etat = :etat , type = :type , tarif1 = :tarif1 , tarif2 = :tarif2 , tarif3 = :tarif3 where id = $chambreId');
+        $result -> execute($params);
     }
 }

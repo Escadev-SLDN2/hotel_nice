@@ -34,7 +34,7 @@ function editchambreAction() {
             'tarif3'  => $chambreTarif3,
         );
 
-        $chambreObject->changeChambre( $chambreId );
+        $chambreObject->changeChambre( $params );
         header( 'Location: ' . SITE_DIR . 'admin/editchambre/' . $chambre['id'] . '' );
 
     }
