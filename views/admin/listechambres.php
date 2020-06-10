@@ -1,7 +1,7 @@
 <?php require('views/admin/templates/header.php');?> 
+<h1>Liste des chambres</h1>
 
 <div class="container">
-    <h1>Liste des chambres</h1>
 	<section class="row">
 		<div class="block-content large-block color-sky centered">
 			<table>
@@ -35,7 +35,7 @@
 				<tfoot></tfoot>
 			</table>
 			<hr/>
-			<a href="<?php echo SITE_DIR; ?>admin/ajoutchambre/<?php echo $chambre['id']; ?>">Ajouter un type de chambre<i class="fas fa-edit"></i></a>
+			<a href="<?php echo SITE_DIR; ?>admin/ajoutchambre/<?php echo $chambre['id']; ?>"><i class="fas fa-plus"></i> Ajouter un type de chambre</a>
 		</div>
 	</section>
     

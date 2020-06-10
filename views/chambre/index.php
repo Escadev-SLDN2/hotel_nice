@@ -41,7 +41,7 @@
                             echo "&#201;tat : <span class='result valid'>" . ucfirst($chambre['etat']) . "</span>";
                             } else {
                             echo "&#201;tat : <span class='result unvalid'>" . ucfirst($chambre['etat']) . "</span>"; } ?>
-                        <button class="btn-reserv" type="button" id="btnReserv">Réserver</button>
+                        <button class="button" type="button" id="btnReserv">Réserver</button>
                     </p>
                 </div>
 
