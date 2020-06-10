@@ -18,6 +18,11 @@ function editchambreAction() {
     $chambreObject = new Chambre();
     $chambre = $chambreObject->getChambre($chambreId);
 
+    if( isset( $_POST['editchambre'] ) ) {
+        $chambreObject->changeChambre( $chambreId );
+        header( 'Location: ' . BASE_URL . 'admin/editchambre/' . $chambre['id'] . '' );
+    }
+
     $pageTitle = 'Modifier une chambre';
     require('views/admin/editchambre.php');
 }
