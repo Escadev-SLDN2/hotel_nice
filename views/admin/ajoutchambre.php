@@ -25,8 +25,8 @@
             <input type="text" name="txt_img" id="txt_img" required />
         </div>
         <div class="form_row">
-            <label for="txt_infos">Informations</label>
-            <input type="text" name="txt_infos" id="txt_infos" />
+            <label for="txt_info">Informations</label>
+            <input type="text" name="txt_info" id="txt_info" />
         </div>
         <div class="form_row">
             <label for="txt_tarif1">Tarif 1</label>
@@ -41,7 +41,7 @@
             <input type="text" name="txt_tarif3" id="txt_tarif3" required />
         </div>
         <div class="form_row">
-            <input type="submit" value="Modifier" name="editchambre"/>
+            <input type="submit" value="Ajouter" name="ajoutchambre"/>
         </div>
     </form>
 </div>

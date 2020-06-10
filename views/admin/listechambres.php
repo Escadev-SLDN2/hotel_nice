@@ -26,7 +26,8 @@
 						<td><?php echo $chambre['tarif1']; ?></td>
 						<td><?php echo $chambre['tarif2']; ?></td>
 						<td><?php echo $chambre['tarif3']; ?></td>
-						<td><a href="<?php echo SITE_DIR; ?>admin/editchambre/<?php echo $chambre['id']; ?>"><i class="fas fa-edit"></i></a></td>
+						<td><a href="<?php echo SITE_DIR; ?>admin/editchambre/<?php echo $chambre['id']; ?>"><i class="fas fa-edit"></i></a>
+						<a href="<?php echo SITE_DIR; ?>admin/supprimechambre/<?php echo $chambre['id']; ?>"><i class="fas fa-trash"></i></a></td>
 					</tr>
 					<?php endforeach; ?>
 				</tbody>
