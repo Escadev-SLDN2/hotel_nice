@@ -93,11 +93,8 @@ function supprimechambreAction()
     Header( 'Location: ' . SITE_DIR . 'admin/listechambres' );
 }
 
-function loginAction()
+function loginadminAction()
 {
-    $loginObject = new Login();
-    $loginObject->loginadmin();
-
     $pageTitle = 'Mon compte';
-    require( 'views/admin/login.php' );
+    require( 'views/admin/loginadmin.php' );
 }
