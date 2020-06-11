@@ -95,6 +95,9 @@ function supprimechambreAction()
 
 function loginadminAction()
 {
+    // $loginObject = new Login();
+    // $loginObject->loginAdmin();
+
     $pageTitle = 'Mon compte';
     require( 'views/admin/loginadmin.php' );
 }
