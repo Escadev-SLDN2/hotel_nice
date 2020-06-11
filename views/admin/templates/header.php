@@ -41,11 +41,11 @@
 </head>
 <body>
     <header>
-        <a href="<?php echo SITE_DIR . 'admin/listechambres'; ?>"><img src="<?php echo SITE_DIR;?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
-        <span class="title"><a href="<?php echo SITE_DIR . 'admin/listechambres'; ?>">Administration</a></span>
+        <a href="<?php echo SITE_DIR . 'admin'; ?>"><img src="<?php echo SITE_DIR;?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
+        <span class="title"><a href="<?php echo SITE_DIR . 'admin'; ?>">Administration</a></span>
         <nav id="mainNav">
 			<ul>
-				<li><a href="">Tableau de bord</a></li>
+				<li><a href="<?php echo SITE_DIR;?>admin">Tableau de bord</a></li>
 				<li><a href="">R&eacute;servations</a></li>
 				<li><a href="<?php echo SITE_DIR;?>admin/listechambres">Chambres</a></li>
 				<li><a href="">Clients</a></li>

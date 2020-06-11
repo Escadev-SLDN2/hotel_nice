@@ -1,6 +1,12 @@
 <?php
 require('models/Chambre.php');
 
+function indexAction(){
+    $pageTitle = 'Administration';
+    require('views/admin/index.php');
+
+}
+
 function listechambresAction() {
     $chambreObject = new Chambre();
     $chambres = $chambreObject->getChambres();
