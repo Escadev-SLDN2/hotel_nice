@@ -50,6 +50,9 @@
 				<li><a href="<?php echo SITE_DIR;?>admin/listechambres">Chambres</a></li>
 				<li><a href="">Clients</a></li>
 				<li><a href="<?php echo SITE_DIR;?>admin/loginadmin">Mon compte</a></li>
+				<?php if( isset($_COOKIE['isLogged']) ) : ?>
+                        <li><a class="bouton" href="<?php echo SITE_DIR; ?>admin/logout"><i class="fas fa-user-times"></i></a></li>
+                    <?php endif; ?>
 			</ul>
         </nav>
 		<a href="javascript:void(0);" class="burger" onclick="burger()">

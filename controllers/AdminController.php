@@ -32,7 +32,15 @@ function loginadminAction()
     }
 
     $pageTitle = 'Mon compte';
-    require( 'views/admin/loginadmin.php' );
+    require_once( 'views/admin/loginadmin.php' );
+}
+
+function logoutAction(){
+     // 1. Détruire la session
+     setcookie( 'isLogged', true, time() + 0 );
+
+     // 2. Redirection vers la page login
+     Header( 'Location: ' . SITE_DIR . 'admin/loginadmin' );
 }
 
 function listechambresAction()
