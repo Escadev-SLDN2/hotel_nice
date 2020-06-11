@@ -49,7 +49,7 @@
 				<li><a href="">R&eacute;servations</a></li>
 				<li><a href="<?php echo SITE_DIR;?>admin/listechambres">Chambres</a></li>
 				<li><a href="">Clients</a></li>
-				<li><a href="">Mon compte</a></li>
+				<li><a href="<?php echo SITE_DIR;?>admin/loginadmin">Mon compte</a></li>
 			</ul>
         </nav>
 		<a href="javascript:void(0);" class="burger" onclick="burger()">
