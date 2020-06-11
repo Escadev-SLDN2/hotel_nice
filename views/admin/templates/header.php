@@ -41,8 +41,8 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="../assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
-        <h1><a href="index.html">Administration</a></h1>
+        <a href="<?php echo SITE_DIR . 'admin/listechambres'; ?>"><img src="<?php echo SITE_DIR;?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
+        <span class="title"><a href="<?php echo SITE_DIR . 'admin/listechambres'; ?>">Administration</a></span>
         <nav id="mainNav">
 			<ul>
 				<li><a href="">Tableau de bord</a></li>
