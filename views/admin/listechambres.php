@@ -41,5 +41,5 @@
     
 </div>
 
-<?php require('views/templates/footer.php');?>
+<?php require('views/admin/templates/footer.php');?>
 
