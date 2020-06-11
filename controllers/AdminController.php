@@ -1,5 +1,6 @@
 <?php
 require( 'models/Chambre.php' );
+require_once( 'models/Login.php' );
 
 function isLogged()
 {
@@ -21,13 +22,23 @@ function indexAction()
 function loginadminAction()
 {
     if( isset( $_POST['adminconnect'] ) ) {
-        // $loginObject = new Login();
-        // $loginObject->loginAdmin();
+        $login    = $_POST['txt_mail'];
+        $password = $_POST['txt_pass'];
 
-        // On crée le cookie
-        setcookie( 'isLogged', true, time() + 300 );
+        $params = [
+            'mail'     => $login,
+            'password' => $password,
+        ];
 
-        // On redirige vers le tableau
+        $loginObject = new Login();
+        $result      = $loginObject->loginAdmin( $params );
+
+        if( $result ) {
+            // On crée le cookie
+            setcookie( 'isLogged', true, time() + 300 );
+        }
+
+        // On redirige vers le tableau de bord
         Header( 'Location: ' . SITE_DIR . 'admin' );
     }
 
@@ -35,12 +46,13 @@ function loginadminAction()
     require_once( 'views/admin/loginadmin.php' );
 }
 
-function logoutAction(){
-     // 1. Détruire la session
-     setcookie( 'isLogged', true, time() + 0 );
+function logoutAction()
+{
+    // 1. Détruire la session
+    setcookie( 'isLogged', true, time() + 0 );
 
-     // 2. Redirection vers la page login
-     Header( 'Location: ' . SITE_DIR . 'admin/loginadmin' );
+    // 2. Redirection vers la page login
+    Header( 'Location: ' . SITE_DIR . 'admin/loginadmin' );
 }
 
 function listechambresAction()
