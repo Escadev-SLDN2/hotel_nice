@@ -10,13 +10,14 @@ body {
 
     // Boutons
     .button {
+        margin-left: 1vw;
+        margin-top: 1em;
+        padding: 7px 20px;
         display: inline-block;
-        padding: 6px 10vh;
         margin-left: 4vh;
         font-size: 1.1em;
         color: $white;
-        background-color: $color_ocean_t;
-        border: $color_ocean solid;
+        border-radius: 0.8vw;
         cursor: pointer;
 
         &.margeless {
@@ -33,6 +34,14 @@ body {
             background-color: $color_ocean_t;
         }
 
+        &.button_sand{
+            background-color:$color_sand;
+            border: $color_sand solid;
+        }
+        &.button_ocean{
+            background-color:$color_ocean;
+            border: $color_ocean solid;
+        }   
     }
 
     h1{
