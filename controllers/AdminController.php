@@ -76,7 +76,7 @@ function edittypeAction()
 
     if( isset( $_POST['edittype'] ) ) {
 
-        $typeNom         = htmlspecialchars( $_POST['txt_etat'] );
+        $typeNom         = htmlspecialchars( $_POST['txt_nom'] );
         $typeDescription = htmlspecialchars( $_POST['txt_description'] );
         $typeServices    = htmlspecialchars( $_POST['txt_services'] );
         $typeImage       = htmlspecialchars( $_POST['txt_img'] );
@@ -95,7 +95,7 @@ function edittypeAction()
         );
 
         Type::changeType( $typeId, $params );
-        header( 'Location: ' . SITE_DIR . 'admin/edittype/' . $type['id'] . '' );
+        header( 'Location: ' . SITE_DIR . 'admin/listetypes/' . $type['id'] . '' );
     }
 
     $pageTitle = 'Modifier un type de chambre';
@@ -108,7 +108,7 @@ function ajouttypeAction()
 
     if( isset( $_POST['ajouttype'] ) ) {
         // 1. Récupération des données du formulaire
-        $typeNom         = htmlspecialchars( $_POST['txt_etat'] );
+        $typeNom         = htmlspecialchars( $_POST['txt_nom'] );
         $typeDescription = htmlspecialchars( $_POST['txt_description'] );
         $typeServices    = htmlspecialchars( $_POST['txt_services'] );
         $typeImage       = htmlspecialchars( $_POST['txt_img'] );
