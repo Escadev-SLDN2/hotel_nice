@@ -61,7 +61,7 @@ function listetypesAction()
     $types      = Type::getTypes();
 
     $pageTitle = 'Gérer les types de chambre';
-    require( 'views/admin/listechambres.php' );
+    require( 'views/admin/listetypes.php' );
 }
 
 function edittypeAction()
@@ -95,11 +95,11 @@ function edittypeAction()
         );
 
         Type::changeType( $typeId, $params );
-        header( 'Location: ' . SITE_DIR . 'admin/editchambre/' . $type['id'] . '' );
+        header( 'Location: ' . SITE_DIR . 'admin/edittype/' . $type['id'] . '' );
     }
 
     $pageTitle = 'Modifier un type de chambre';
-    require( 'views/admin/editchambre.php' );
+    require( 'views/admin/edittype.php' );
 }
 
 function ajouttypeAction()
@@ -130,11 +130,11 @@ function ajouttypeAction()
         Type::ajouterType( $params );
 
         // 3. Redirection vers la liste des chambres
-        Header( 'Location: ' . SITE_DIR . 'admin/listechambres' );
+        Header( 'Location: ' . SITE_DIR . 'admin/listetypes' );
     }
 
     $pageTitle = 'Ajouter un type de chambre';
-    require( 'views/admin/ajoutchambre.php' );
+    require( 'views/admin/ajouttype.php' );
 }
 
 function supprimetypeAction()
@@ -147,5 +147,5 @@ function supprimetypeAction()
 
     Type::supprimerType( $typeId );
 
-    Header( 'Location: ' . SITE_DIR . 'admin/listechambres' );
+    Header( 'Location: ' . SITE_DIR . 'admin/listetypes' );
 }

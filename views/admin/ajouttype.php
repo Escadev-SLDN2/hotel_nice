@@ -6,15 +6,11 @@
 		<div class="block-content large-block color-sky centered">
             <form method="post">
                 <div class="form_row">
-                    <input type="text" name="txt_etat" id="txt_etat" required />
-                    <label for="txt_etat">Etat</label>
+                    <input type="text" name="txt_nom" id="txt_nom" required />
+                    <label for="txt_nom">Nom</label>
                 </div>
                 <div class="form_row">
-                    <input type="text" name="txt_type" id="txt_type "required />
-                    <label for="txt_type">Type</label>
-                </div>
-                <div class="form_row">
-                    <textarea type="text" name="txt_description" id="txt_description"></textarea>
+                    <textarea name="txt_description" id="txt_description"></textarea>
                     <label for="txt_description">Description</label>
                 </div>
                 <div class="form_row">
@@ -24,10 +20,6 @@
                 <div class="form_row">
                     <input type="text" name="txt_img" id="txt_img" required />
                     <label for="txt_img">Image</label>
-                </div>
-                <div class="form_row">
-                    <textarea type="text" name="txt_info" id="txt_info"></textarea>
-                    <label for="txt_info">Informations</label>
                 </div>
                 <div class="form_row">
                     <input type="text" name="txt_tarif1" id="txt_tarif1" required />
@@ -42,7 +34,7 @@
                     <label for="txt_tarif3">Tarif 3</label>
                 </div>
                 <div class="form_row_centered">
-                    <input class="button margeless" type="submit" value="Ajouter" name="ajoutchambre"/>
+                    <input class="button margeless" type="submit" value="Ajouter" name="ajouttype"/>
                 </div>
             </form>
         </div>

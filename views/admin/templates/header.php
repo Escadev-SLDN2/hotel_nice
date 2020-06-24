@@ -47,7 +47,7 @@
 			<ul>
 				<li><a href="<?php echo SITE_DIR;?>admin">Tableau de bord</a></li>
 				<li><a href="">R&eacute;servations</a></li>
-				<li><a href="<?php echo SITE_DIR;?>admin/listechambres">Chambres</a></li>
+				<li><a href="<?php echo SITE_DIR;?>admin/listetypes">types de chambre</a></li>
 				<li><a href="">Clients</a></li>
 				<li><a href="<?php echo SITE_DIR;?>admin/loginadmin">Mon compte</a></li>
 				<?php if( isset($_COOKIE['isLogged']) ) : ?>
