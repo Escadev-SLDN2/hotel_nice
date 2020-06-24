@@ -28,7 +28,13 @@ class Chambre
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
     }
 
-    
+    /* public function getValidChambreByType($typeId)
+    {
+        $bdd = new Bdd();
+        $connection = $bdd->getConnection();
+        $result = $connection->query('SELECT * FROM chambre where id_type = ' . $typeId);
+        return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
+    } */
 
     public function changeChambre($chambreId, $params)
     {

@@ -4,7 +4,7 @@ require('models/Bdd.php');
 
 class Type
 {
-    public function getTypes()
+    public static function getTypes()
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
@@ -12,7 +12,7 @@ class Type
         return $result ? $result->fetchAll(PDO::FETCH_ASSOC) : null;
     }
 
-    public function getType($typeId)
+    public static function getType($typeId)
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
@@ -20,7 +20,7 @@ class Type
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
     }
 
-    public function changeType($typeId, $params)
+    public static function changeType($typeId, $params)
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
@@ -28,7 +28,7 @@ class Type
         $result -> execute($params);
     }
 
-    public function ajouterType( $params )
+    public static function ajouterType( $params )
     {
         $bdd        = new Bdd();
         $connection = $bdd->getConnection();
@@ -38,7 +38,7 @@ class Type
         $result->execute( $params );
     }
 
-    public function supprimerType( $id )
+    public static function supprimerType( $id )
     {
         $bdd        = new Bdd();
         $connection = $bdd->getConnection();
