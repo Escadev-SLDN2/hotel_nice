@@ -46,7 +46,7 @@
 
             <!--Image-->
 			<div class="block-content medium-block">
-                <img src="<?php echo SITE_DIR; ?>assets/img/<?php echo $chambre['img']; ?>" alt="<?php echo $chambre['type']; ?>" />
+                <img src="<?php echo SITE_DIR; ?>assets/img/<?php echo $type['img']; ?>" alt="<?php echo $type['nom']; ?>" />
             </div>
         </section>
     <?php endforeach; ?>
