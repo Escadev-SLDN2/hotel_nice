@@ -8,6 +8,33 @@ body {
     background-position: center bottom;
     font-family: $default-font, Arial;
 
+    // Boutons
+    .button {
+        display: inline-block;
+        padding: 6px 10vh;
+        margin-left: 4vh;
+        font-size: 1.1em;
+        color: $white;
+        background-color: $color_ocean_t;
+        border: $color_ocean solid;
+        cursor: pointer;
+
+        &.margeless {
+            margin-left: 0;
+        }
+
+        &:hover {
+            color: $black;
+            background-color: $white_t;
+        }
+
+        &:active {
+            color: $white;
+            background-color: $color_ocean_t;
+        }
+
+    }
+
     h1{
         margin-top: 0;
         font-size: 1.5em;
