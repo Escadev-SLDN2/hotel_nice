@@ -24,7 +24,7 @@ class Type
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
-        $result = $connection->prepare("UPDATE type SET etat = :etat , type = :type , tarif1 = :tarif1 , tarif2 = :tarif2 , tarif3 = :tarif3 where id = $typeId");
+        $result = $connection->prepare("UPDATE type SET nom = :nom , description = :description , tarif1 = :tarif1 , tarif2 = :tarif2 , tarif3 = :tarif3 , services = :services , img = :img where id = $typeId");
         $result -> execute($params);
     }
 
@@ -34,7 +34,7 @@ class Type
         $connection = $bdd->getConnection();
 
         $result =
-            $connection->prepare( 'INSERT INTO type(etat, type, description, services, img, info, tarif1, tarif2, tarif3) VALUES(:etat, :type, :description, :services, :img, :info, :tarif1, :tarif2, :tarif3 )' );
+            $connection->prepare( 'INSERT INTO type(nom, description, tarif1, tarif2, tarif3, services, img) VALUES( :nom, :description, :tarif1, :tarif2, :tarif3, :services, :img )' );
         $result->execute( $params );
     }
 
