@@ -1,5 +1,5 @@
 <?php
-require('models/Chambre.php');
+require('models/Type.php');
 
 function indexAction() {
     $typeObject = new Type();
