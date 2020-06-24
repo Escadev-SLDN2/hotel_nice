@@ -57,6 +57,11 @@
 			<a href="javascript:void(0);" class="burger" onclick="burger()">
     			<i class="fa fa-bars"></i>
 			</a>
+            <div class="etat-reserv">
+                <p>
+                    <button class="button" type="button" id="btnReserv">Réserver</button>
+                </p>
+            </div>
             <p>FR / <a href="<?php echo SITE_DIR;?>en">EN</a></p>
         </header>
         
