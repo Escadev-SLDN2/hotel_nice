@@ -2,8 +2,8 @@
 require('models/Chambre.php');
 
 function indexAction() {
-    $chambreObject = new Chambre();
-    $chambres = $chambreObject->getChambres();
+    $typeObject = new Type();
+    $chambres = $typeObject->getTypes();
 
     $pageTitle = 'Liste des chambres';
     require('views/chambre/index.php');
