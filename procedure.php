@@ -1,4 +1,27 @@
 <?php
+
+// TRIGGER "AFTER INSERT" - TABLE reservation
+CREATE TRIGGER nombreNuits
+AFTER INSERT ON reservation
+FOR EACH row
+UPDATE reservation SET nombre_de_nuits=(SELECT Datediff( date_debut, date_fin));
+
+
+// TRIGGER "AFTER UPDATE" - TABLE reservation
+CREATE TRIGGER facture
+AFTER UPDATE reservation SET termine=oui
+FOR EACH row
+CALL AutoFacture();
+
+
+// TRIGGER "AFTER INSERT" - TABLE facture
+CREATE TRIGGER factureTotale
+AFTER INSERT ON facture
+FOR EACH row
+UPDATE facture SET factureTotale=(SELECT tarif_type FROM facture)*(SELECT nombre_de_nuits FROM facture);
+
+
+// PROCEDURES
 DELIMITER |
 
 CREATE PROCEDURE AutoFacture()
@@ -13,10 +36,6 @@ BEGIN
     FROM type;
 
     INSERT INTO facture(nombre_de_nuits)
-    /* Calcul et insertion du nombre de nuits avec les dates présentes dans la table reservation ("Datediff()") */
-    ;
-
-    UPDATE facture
-SET facture_totale=(SELECT tarif_type FROM facture WHERE /*?*/)*(SELECT nombre_de_nuits FROM facture WHERE /*?*/) /*WHERE ?*/;
-
+    SELECT nombre_de_nuits
+    FROM reservation;
 END; |
