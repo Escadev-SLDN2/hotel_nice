@@ -39,7 +39,7 @@
 				<tfoot></tfoot>
 			</table>
 			<hr/>
-			<a href="<?php echo SITE_DIR; ?>admin/ajoutreservations/<?php echo $reserv['id']; ?>"><i class="fas fa-plus"></i> Ajouter un reservations de chambre</a>
+			<a href="<?php echo SITE_DIR; ?>admin/ajoutreservations/<?php echo $reserv['id']; ?>"><i class="fas fa-plus"></i> Ajouter une reservation</a>
 		</div>
 	</section>
     
