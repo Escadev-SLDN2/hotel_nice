@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 26 juin 2020 à 10:40
+-- Généré le : ven. 26 juin 2020 à 17:04
 -- Version du serveur :  10.1.44-MariaDB-0ubuntu0.18.04.1
 -- Version de PHP : 7.4.7
 
@@ -102,15 +102,16 @@ CREATE TABLE `reservation` (
   `id_chambre` int(11) NOT NULL,
   `date_debut` date NOT NULL,
   `date_fin` date NOT NULL,
-  `termine` varchar(3) NOT NULL DEFAULT 'non'
+  `termine` varchar(3) NOT NULL DEFAULT 'non',
+  `nombre_de_nuits` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `reservation`
 --
 
-INSERT INTO `reservation` (`id`, `id_client`, `id_chambre`, `date_debut`, `date_fin`, `termine`) VALUES
-(1, 1, 1, '2020-06-27', '2020-06-29', 'non');
+INSERT INTO `reservation` (`id`, `id_client`, `id_chambre`, `date_debut`, `date_fin`, `termine`, `nombre_de_nuits`) VALUES
+(1, 1, 1, '2020-06-27', '2020-06-29', 'non', NULL);
 
 -- --------------------------------------------------------
 
