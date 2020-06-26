@@ -3,22 +3,22 @@
 <h1>Chambres</h1>
 <div class="container">
 
-    <?php foreach ($chambres as $chambre) : ?>
+    <?php foreach ($types as $type) : ?>
         <section class="row reverse">
             <div class="block-content large-block span-bold color-sky">
 
                 <!--Type de Chambre-->
-                <h2><?php echo ucfirst($chambre['type']); ?></h2>
+                <h2><?php echo ucfirst($type['nom']); ?></h2>
 
                 <!--Description-->
                 <div>
-                    <?php echo $chambre['description']; ?>
+                    <?php echo $type['description']; ?>
                 </div>
 
                 <!--Service-->
                 <div class="service">
                     <ul><span class="h-service">Services :</span>
-                        <?php $services = explode(';', $chambre['services']); 
+                        <?php $services = explode(';', $type['services']); 
                         foreach($services as $service) : ?>
                             <li class="li-service"><?php echo ucfirst($service) ?></li>
                         <?php endforeach; ?>
@@ -28,19 +28,16 @@
                 <!--Saisons et Tarif-->
                 <div class="tarif">
                     <ul>
-                        <li class="season low"> Basse saison : <?php echo number_format($chambre['tarif1'], 0, ',', ' '); ?> &euro; </li> 
-                        <li class="season moderate"> Moyenne saison : <?php echo number_format($chambre['tarif2'], 0, ',', ' '); ?> &euro; </li> 
-                        <li class="season hot"> Haute saison : <?php echo number_format($chambre['tarif3'], 0, ',', ' '); ?> &euro; </li> 
+                        <li class="season low"> Basse saison : <?php echo number_format($type['tarif1'], 0, ',', ' '); ?> &euro; </li> 
+                        <li class="season moderate"> Moyenne saison : <?php echo number_format($type['tarif2'], 0, ',', ' '); ?> &euro; </li> 
+                        <li class="season hot"> Haute saison : <?php echo number_format($type['tarif3'], 0, ',', ' '); ?> &euro; </li> 
                     </ul>
                 </div>
 
                 <!--Réservation -->
                 <div class="etat-reserv">
                     <p>
-                        <?php if ($chambre['etat'] == 'disponible') {
-                            echo "&#201;tat : <span class='result valid'>" . ucfirst($chambre['etat']) . "</span>";
-                            } else {
-                            echo "&#201;tat : <span class='result unvalid'>" . ucfirst($chambre['etat']) . "</span>"; } ?>
+                        x disponibles
                         <button class="button" type="button" id="btnReserv">Réserver</button>
                     </p>
                 </div>
@@ -49,7 +46,7 @@
 
             <!--Image-->
 			<div class="block-content medium-block">
-                <img src="<?php echo SITE_DIR; ?>assets/img/<?php echo $chambre['img']; ?>" alt="<?php echo $chambre['type']; ?>" />
+                <img src="<?php echo SITE_DIR; ?>assets/img/<?php echo $type['img']; ?>" alt="<?php echo $type['nom']; ?>" />
             </div>
         </section>
     <?php endforeach; ?>

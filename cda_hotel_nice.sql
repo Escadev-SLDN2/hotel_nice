@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : jeu. 11 juin 2020 à 11:18
+-- Généré le : ven. 26 juin 2020 à 10:11
 -- Version du serveur :  10.1.44-MariaDB-0ubuntu0.18.04.1
--- Version de PHP : 7.4.6
+-- Version de PHP : 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -27,32 +27,103 @@ USE `cda_hotel_nice`;
 -- --------------------------------------------------------
 
 --
--- Structure de la table `chambres`
+-- Structure de la table `chambre`
 --
 
-DROP TABLE IF EXISTS `chambres`;
-CREATE TABLE `chambres` (
+DROP TABLE IF EXISTS `chambre`;
+CREATE TABLE `chambre` (
   `id` int(11) NOT NULL,
+  `id_type` int(11) NOT NULL,
   `etat` varchar(255) NOT NULL,
-  `type` varchar(255) NOT NULL,
-  `description` text,
-  `services` varchar(255) DEFAULT NULL,
-  `img` varchar(255) NOT NULL,
-  `info` text,
-  `tarif1` decimal(6,2) NOT NULL,
-  `tarif2` decimal(6,2) NOT NULL,
-  `tarif3` decimal(6,2) NOT NULL
+  `info` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `chambres`
+-- Déchargement des données de la table `chambre`
 --
 
-INSERT INTO `chambres` (`id`, `etat`, `type`, `description`, `services`, `img`, `info`, `tarif1`, `tarif2`, `tarif3`) VALUES
-(1, 'disponible', 'chambre simple', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lectus dolor. Donec eros diam, hendrerit sit amet massa ac, ullamcorper dignissim magna. Praesent sed nisi ipsum.</p> <p>Praesent condimentum id nulla id iaculis. Ut convallis mauris vitae libero tristique molestie. Aliquam erat volutpat. Donec venenatis, arcu et vulputate lacinia, enim lacus rhoncus metus, fermentum porta ligula ex quis ex. Pellentesque semper accumsan tellus eget commodo. Curabitur fermentum urna quis cursus pretium.</p>\r\n\r\n<p>Aliquam ultrices odio non dui hendrerit ultricies in ac justo. Ut fermentum quam sit amet iaculis finibus. Aliquam vestibulum sit amet ipsum suscipit pretium. Mauris id aliquet ipsum. In augue ante, rhoncus at condimentum sed, ultrices sit amet dui. Sed mollis mauris sed metus efficitur sollicitudin. Praesent vitae arcu sem. Nullam malesuada turpis sit amet facilisis interdum. Vivamus luctus a ex consectetur euismod. Nullam pellentesque velit sit amet fermentum consequat. Mauris placerat in felis eu consectetur. Maecenas vel viverra justo.</p>\r\n\r\n<p>Aenean interdum magna augue, id imperdiet dui varius a. In porttitor pretium vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus quis neque ut urna rhoncus dignissim in efficitur nunc. Duis feugiat mauris ut magna maximus mattis. Sed at magna a est elementum convallis. Nulla cursus aliquet purus, pellentesque auctor turpis vehicula posuere. Nulla facilisi. Etiam dignissim, ligula et elementum interdum, mi velit mollis metus, ut sodales urna velit non ligula. Nulla aliquam malesuada metus ac faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p> <p>Suspendisse sit amet ultricies nibh.</p>', 'pressing;animal', 'simple.jpg', NULL, '69.00', '93.00', '120.00'),
-(2, 'disponible', 'chambre double', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lectus dolor. Donec eros diam, hendrerit sit amet massa ac, ullamcorper dignissim magna. Praesent sed nisi ipsum.</p> <p>Praesent condimentum id nulla id iaculis. Ut convallis mauris vitae libero tristique molestie. Aliquam erat volutpat. Donec venenatis, arcu et vulputate lacinia, enim lacus rhoncus metus, fermentum porta ligula ex quis ex. Pellentesque semper accumsan tellus eget commodo. Curabitur fermentum urna quis cursus pretium.</p>\r\n\r\n<p>Aliquam ultrices odio non dui hendrerit ultricies in ac justo. Ut fermentum quam sit amet iaculis finibus. Aliquam vestibulum sit amet ipsum suscipit pretium. Mauris id aliquet ipsum. In augue ante, rhoncus at condimentum sed, ultrices sit amet dui. Sed mollis mauris sed metus efficitur sollicitudin. Praesent vitae arcu sem. Nullam malesuada turpis sit amet facilisis interdum. Vivamus luctus a ex consectetur euismod. Nullam pellentesque velit sit amet fermentum consequat. Mauris placerat in felis eu consectetur. Maecenas vel viverra justo.</p>\r\n<p>Suspendisse sit amet ultricies nibh.</p>', 'animaux;coffre-fort', 'double.jpg', NULL, '71.00', '105.00', '144.00'),
-(3, 'occupées', 'chambre double avec cuisine', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lectus dolor. Donec eros diam, hendrerit sit amet massa ac, ullamcorper dignissim magna. Praesent sed nisi ipsum.</p> <p>Praesent condimentum id nulla id iaculis. Ut convallis mauris vitae libero tristique molestie. Aliquam erat volutpat. Donec venenatis, arcu et vulputate lacinia, enim lacus rhoncus metus, fermentum porta ligula ex quis ex. Pellentesque semper accumsan tellus eget commodo. Curabitur fermentum urna quis cursus pretium.</p>\r\n\r\n<p>Aliquam ultrices odio non dui hendrerit ultricies in ac justo. Ut fermentum quam sit amet iaculis finibus. Aliquam vestibulum sit amet ipsum suscipit pretium. Mauris id aliquet ipsum. In augue ante, rhoncus at condimentum sed, ultrices sit amet dui. Sed mollis mauris sed metus efficitur sollicitudin. Praesent vitae arcu sem. Nullam malesuada turpis sit amet facilisis interdum. Vivamus luctus a ex consectetur euismod. Nullam pellentesque velit sit amet fermentum consequat. Mauris placerat in felis eu consectetur. Maecenas vel viverra justo.</p>\r\n\r\n<p>Aenean interdum magna augue, id imperdiet dui varius a. In porttitor pretium vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus quis neque ut urna rhoncus dignissim in efficitur nunc. Duis feugiat mauris ut magna maximus mattis. Sed at magna a est elementum convallis. Nulla cursus aliquet purus, pellentesque auctor turpis vehicula posuere. Nulla facilisi. Etiam dignissim, ligula et elementum interdum, mi velit mollis metus, ut sodales urna velit non ligula. Nulla aliquam malesuada metus ac faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p> <p>Suspendisse sit amet ultricies nibh.</p>', 'mini-bar;balcon', 'double-cuisine.jpg', NULL, '93.00', '122.00', '152.00'),
-(4, 'en construction', 'chambre familiale', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lectus dolor. Donec eros diam, hendrerit sit amet massa ac, ullamcorper dignissim magna. Praesent sed nisi ipsum.</p> <p>Praesent condimentum id nulla id iaculis. Ut convallis mauris vitae libero tristique molestie. Aliquam erat volutpat. Donec venenatis, arcu et vulputate lacinia, enim lacus rhoncus metus, fermentum porta ligula ex quis ex. Pellentesque semper accumsan tellus eget commodo. Curabitur fermentum urna quis cursus pretium.</p>\r\n\r\n<p>Suspendisse sit amet ultricies nibh.</p>', 'pressing;animal;balcon', 'familiale.jpg', NULL, '159.00', '224.00', '304.00');
+INSERT INTO `chambre` (`id`, `id_type`, `etat`, `info`) VALUES
+(1, 1, 'disponible', NULL),
+(2, 2, 'disponible', NULL),
+(3, 2, 'occupées', NULL),
+(4, 4, 'en construction', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `client`
+--
+
+DROP TABLE IF EXISTS `client`;
+CREATE TABLE `client` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `hash_pass` varchar(255) NOT NULL,
+  `add_postale` varchar(255) NOT NULL,
+  `tel` varchar(255) NOT NULL,
+  `c.id_passport` varchar(255) NOT NULL,
+  `pts_fidelite` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `client`
+--
+
+INSERT INTO `client` (`id`, `name`, `email`, `hash_pass`, `add_postale`, `tel`, `c.id_passport`, `pts_fidelite`) VALUES
+(1, 'Bernard', 'bernard@mail.com', 'test', 'chez bernard', '02', '02', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `reservation`
+--
+
+DROP TABLE IF EXISTS `reservation`;
+CREATE TABLE `reservation` (
+  `id` int(11) NOT NULL,
+  `id_client` int(11) NOT NULL,
+  `id_chambre` int(11) NOT NULL,
+  `date_debut` date NOT NULL,
+  `date_fin` date NOT NULL,
+  `termine` varchar(3) NOT NULL DEFAULT 'non'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `reservation`
+--
+
+INSERT INTO `reservation` (`id`, `id_client`, `id_chambre`, `date_debut`, `date_fin`, `termine`) VALUES
+(1, 1, 1, '2020-06-27', '2020-06-29', 'non');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `type`
+--
+
+DROP TABLE IF EXISTS `type`;
+CREATE TABLE `type` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) DEFAULT NULL,
+  `description` text,
+  `tarif1` decimal(6,2) NOT NULL,
+  `tarif2` decimal(6,2) NOT NULL,
+  `tarif3` decimal(6,2) NOT NULL,
+  `services` varchar(255) DEFAULT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `type`
+--
+
+INSERT INTO `type` (`id`, `nom`, `description`, `tarif1`, `tarif2`, `tarif3`, `services`, `img`) VALUES
+(1, 'chambre simple', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lectus dolor. Donec eros diam, hendrerit sit amet massa ac, ullamcorper dignissim magna. Praesent sed nisi ipsum.</p> <p>Praesent condimentum id nulla id iaculis. Ut convallis mauris vitae libero tristique molestie. Aliquam erat volutpat. Donec venenatis, arcu et vulputate lacinia, enim lacus rhoncus metus, fermentum porta ligula ex quis ex. Pellentesque semper accumsan tellus eget commodo. Curabitur fermentum urna quis cursus pretium.</p>\\r\\n\\r\\n<p>Aliquam ultrices odio non dui hendrerit ultricies in ac justo. Ut fermentum quam sit amet iaculis finibus. Aliquam vestibulum sit amet ipsum suscipit pretium. Mauris id aliquet ipsum. In augue ante, rhoncus at condimentum sed, ultrices sit amet dui. Sed mollis mauris sed metus efficitur sollicitudin. Praesent vitae arcu sem. Nullam malesuada turpis sit amet facilisis interdum. Vivamus luctus a ex consectetur euismod. Nullam pellentesque velit sit amet fermentum consequat. Mauris placerat in felis eu consectetur. Maecenas vel viverra justo.</p>\\r\\n\\r\\n<p>Aenean interdum magna augue, id imperdiet dui varius a. In porttitor pretium vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus quis neque ut urna rhoncus dignissim in efficitur nunc. Duis feugiat mauris ut magna maximus mattis. Sed at magna a est elementum convallis. Nulla cursus aliquet purus, pellentesque auctor turpis vehicula posuere. Nulla facilisi. Etiam dignissim, ligula et elementum interdum, mi velit mollis metus, ut sodales urna velit non ligula. Nulla aliquam malesuada metus ac faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p> <p>Suspendisse sit amet ultricies nibh.</p>', '69.00', '93.00', '120.00', 'pressing;animal', 'simple.jpg'),
+(2, 'chambre double', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lectus dolor. Donec eros diam, hendrerit sit amet massa ac, ullamcorper dignissim magna. Praesent sed nisi ipsum.</p> <p>Praesent condimentum id nulla id iaculis. Ut convallis mauris vitae libero tristique molestie. Aliquam erat volutpat. Donec venenatis, arcu et vulputate lacinia, enim lacus rhoncus metus, fermentum porta ligula ex quis ex. Pellentesque semper accumsan tellus eget commodo. Curabitur fermentum urna quis cursus pretium.</p>\\r\\n\\r\\n<p>Aliquam ultrices odio non dui hendrerit ultricies in ac justo. Ut fermentum quam sit amet iaculis finibus. Aliquam vestibulum sit amet ipsum suscipit pretium. Mauris id aliquet ipsum. In augue ante, rhoncus at condimentum sed, ultrices sit amet dui. Sed mollis mauris sed metus efficitur sollicitudin. Praesent vitae arcu sem. Nullam malesuada turpis sit amet facilisis interdum. Vivamus luctus a ex consectetur euismod. Nullam pellentesque velit sit amet fermentum consequat. Mauris placerat in felis eu consectetur. Maecenas vel viverra justo.</p>\\r\\n<p>Suspendisse sit amet ultricies nibh.</p>', '71.00', '105.00', '144.00', 'animaux;coffre-fort', 'double.jpg'),
+(3, 'chambre double avec cuisine', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lectus dolor. Donec eros diam, hendrerit sit amet massa ac, ullamcorper dignissim magna. Praesent sed nisi ipsum.</p> <p>Praesent condimentum id nulla id iaculis. Ut convallis mauris vitae libero tristique molestie. Aliquam erat volutpat. Donec venenatis, arcu et vulputate lacinia, enim lacus rhoncus metus, fermentum porta ligula ex quis ex. Pellentesque semper accumsan tellus eget commodo. Curabitur fermentum urna quis cursus pretium.</p>\\r\\n\\r\\n<p>Aliquam ultrices odio non dui hendrerit ultricies in ac justo. Ut fermentum quam sit amet iaculis finibus. Aliquam vestibulum sit amet ipsum suscipit pretium. Mauris id aliquet ipsum. In augue ante, rhoncus at condimentum sed, ultrices sit amet dui. Sed mollis mauris sed metus efficitur sollicitudin. Praesent vitae arcu sem. Nullam malesuada turpis sit amet facilisis interdum. Vivamus luctus a ex consectetur euismod. Nullam pellentesque velit sit amet fermentum consequat. Mauris placerat in felis eu consectetur. Maecenas vel viverra justo.</p>\\r\\n\\r\\n<p>Aenean interdum magna augue, id imperdiet dui varius a. In porttitor pretium vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus quis neque ut urna rhoncus dignissim in efficitur nunc. Duis feugiat mauris ut magna maximus mattis. Sed at magna a est elementum convallis. Nulla cursus aliquet purus, pellentesque auctor turpis vehicula posuere. Nulla facilisi. Etiam dignissim, ligula et elementum interdum, mi velit mollis metus, ut sodales urna velit non ligula. Nulla aliquam malesuada metus ac faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p> <p>Suspendisse sit amet ultricies nibh.</p>', '93.00', '122.00', '152.00', 'mini-bar;balcon', 'double-cuisine.jpg'),
+(4, 'chambre familiale', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac lectus dolor. Donec eros diam, hendrerit sit amet massa ac, ullamcorper dignissim magna. Praesent sed nisi ipsum.</p> <p>Praesent condimentum id nulla id iaculis. Ut convallis mauris vitae libero tristique molestie. Aliquam erat volutpat. Donec venenatis, arcu et vulputate lacinia, enim lacus rhoncus metus, fermentum porta ligula ex quis ex. Pellentesque semper accumsan tellus eget commodo. Curabitur fermentum urna quis cursus pretium.</p>\\r\\n\\r\\n<p>Suspendisse sit amet ultricies nibh.</p>', '159.00', '224.00', '304.00', 'pressing;animal;balcon', 'familiale.jpg'),
+(5, 'chambre super-simple', 'sqdqsd', '9999.99', '9999.99', '9999.99', 'sqdlmk&quot;qsdmlk&quot;qsldk&quot;f;f', 'starroom.jpg');
 
 -- --------------------------------------------------------
 
@@ -81,9 +152,30 @@ INSERT INTO `users` (`id`, `name`, `email`, `hash_pass`, `role`) VALUES
 --
 
 --
--- Index pour la table `chambres`
+-- Index pour la table `chambre`
 --
-ALTER TABLE `chambres`
+ALTER TABLE `chambre`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `chambre` (`id_type`);
+
+--
+-- Index pour la table `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `reservation_chambre` (`id_chambre`),
+  ADD KEY `reservation_client` (`id_client`);
+
+--
+-- Index pour la table `type`
+--
+ALTER TABLE `type`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -97,16 +189,51 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT pour la table `chambres`
+-- AUTO_INCREMENT pour la table `chambre`
 --
-ALTER TABLE `chambres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `chambre`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT pour la table `client`
+--
+ALTER TABLE `client`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pour la table `type`
+--
+ALTER TABLE `type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `chambre`
+--
+ALTER TABLE `chambre`
+  ADD CONSTRAINT `chambre` FOREIGN KEY (`id_type`) REFERENCES `type` (`id`);
+
+--
+-- Contraintes pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD CONSTRAINT `reservation_chambre` FOREIGN KEY (`id_chambre`) REFERENCES `chambre` (`id`),
+  ADD CONSTRAINT `reservation_client` FOREIGN KEY (`id_client`) REFERENCES `client` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

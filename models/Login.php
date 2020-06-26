@@ -4,7 +4,7 @@ require_once( 'models/Bdd.php' );
 class Login
 {
 
-    public function loginAdmin( $params )
+    public static function Admin( $params )
     {
         $bdd        = new Bdd();
         $connection = $bdd->getConnection();

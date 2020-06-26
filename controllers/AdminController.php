@@ -1,5 +1,5 @@
 <?php
-require( 'models/Chambre.php' );
+require( 'models/Type.php' );
 require_once( 'models/Login.php' );
 
 function isLogged()
@@ -30,8 +30,7 @@ function loginadminAction()
             'password' => $password,
         ];
 
-        $loginObject = new Login();
-        $result      = $loginObject->loginAdmin( $params );
+        $result      = Login::Admin( $params );
 
         if( $result ) {
             // On crée le cookie
@@ -55,102 +54,98 @@ function logoutAction()
     Header( 'Location: ' . SITE_DIR . 'admin/loginadmin' );
 }
 
-function listechambresAction()
+function listetypesAction()
 {
     isLogged();
 
-    $chambreObject = new Chambre();
-    $chambres      = $chambreObject->getChambres();
+    $types      = Type::getTypes();
 
-    $pageTitle = 'Gérer les chambres';
-    require( 'views/admin/listechambres.php' );
+    $pageTitle = 'Gérer les types de chambre';
+    require( 'views/admin/listetypes.php' );
 }
 
-function editchambreAction()
+function edittypeAction()
 {
     isLogged();
 
     $requestUri    = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
     $requestParams = explode( '/', $requestUri );
-    $chambreId     = isset( $requestParams[2] ) ? $requestParams[2] : null;
+    $typeId     = isset( $requestParams[2] ) ? $requestParams[2] : null;
 
-    $chambreObject = new Chambre();
-    $chambre       = $chambreObject->getChambre( $chambreId );
+    $type       = Type::getType( $typeId );
 
-    if( isset( $_POST['editchambre'] ) ) {
+    if( isset( $_POST['edittype'] ) ) {
 
-        $chambreEtat   = htmlspecialchars( $_POST['txt_etat'] );
-        $chambreType   = htmlspecialchars( $_POST['txt_type'] );
-        $chambreTarif1 = htmlspecialchars( $_POST['txt_tarif1'] );
-        $chambreTarif2 = htmlspecialchars( $_POST['txt_tarif2'] );
-        $chambreTarif3 = htmlspecialchars( $_POST['txt_tarif3'] );
+        $typeNom         = htmlspecialchars( $_POST['txt_nom'] );
+        $typeDescription = htmlspecialchars( $_POST['txt_description'] );
+        $typeServices    = htmlspecialchars( $_POST['txt_services'] );
+        $typeImage       = htmlspecialchars( $_POST['txt_img'] );
+        $typeTarif1      = htmlspecialchars( $_POST['txt_tarif1'] );
+        $typeTarif2      = htmlspecialchars( $_POST['txt_tarif2'] );
+        $typeTarif3      = htmlspecialchars( $_POST['txt_tarif3'] );
 
         $params = array(
-            'etat'   => $chambreEtat,
-            'type'   => $chambreType,
-            'tarif1' => $chambreTarif1,
-            'tarif2' => $chambreTarif2,
-            'tarif3' => $chambreTarif3,
+            'nom'         => $typeNom,
+            'description' => $typeDescription,
+            'services'    => $typeServices,
+            'img'         => $typeImage,
+            'tarif1'      => $typeTarif1,
+            'tarif2'      => $typeTarif2,
+            'tarif3'      => $typeTarif3,
         );
 
-        $chambreObject->changeChambre( $chambreId, $params );
-        header( 'Location: ' . SITE_DIR . 'admin/editchambre/' . $chambre['id'] . '' );
+        Type::changeType( $typeId, $params );
+        header( 'Location: ' . SITE_DIR . 'admin/listetypes/' . $type['id'] . '' );
     }
 
-    $pageTitle = 'Modifier une chambre';
-    require( 'views/admin/editchambre.php' );
+    $pageTitle = 'Modifier un type de chambre';
+    require( 'views/admin/edittype.php' );
 }
 
-function ajoutchambreAction()
+function ajouttypeAction()
 {
     isLogged();
 
-    if( isset( $_POST['ajoutchambre'] ) ) {
+    if( isset( $_POST['ajouttype'] ) ) {
         // 1. Récupération des données du formulaire
-        $chambreEtat        = htmlspecialchars( $_POST['txt_etat'] );
-        $chambreType        = htmlspecialchars( $_POST['txt_type'] );
-        $chambreDescription = htmlspecialchars( $_POST['txt_description'] );
-        $chambreServices    = htmlspecialchars( $_POST['txt_services'] );
-        $chambreImage       = htmlspecialchars( $_POST['txt_img'] );
-        $chambreInfo        = htmlspecialchars( $_POST['txt_info'] );
-        $chambreTarif1      = htmlspecialchars( $_POST['txt_tarif1'] );
-        $chambreTarif2      = htmlspecialchars( $_POST['txt_tarif2'] );
-        $chambreTarif3      = htmlspecialchars( $_POST['txt_tarif3'] );
+        $typeNom         = htmlspecialchars( $_POST['txt_nom'] );
+        $typeDescription = htmlspecialchars( $_POST['txt_description'] );
+        $typeServices    = htmlspecialchars( $_POST['txt_services'] );
+        $typeImage       = htmlspecialchars( $_POST['txt_img'] );
+        $typeTarif1      = htmlspecialchars( $_POST['txt_tarif1'] );
+        $typeTarif2      = htmlspecialchars( $_POST['txt_tarif2'] );
+        $typeTarif3      = htmlspecialchars( $_POST['txt_tarif3'] );
 
         $params = array(
-            'etat'        => $chambreEtat,
-            'type'        => $chambreType,
-            'description' => $chambreDescription,
-            'services'    => $chambreServices,
-            'img'         => $chambreImage,
-            'info'        => $chambreInfo,
-            'tarif1'      => $chambreTarif1,
-            'tarif2'      => $chambreTarif2,
-            'tarif3'      => $chambreTarif3,
+            'nom'         => $typeNom,
+            'description' => $typeDescription,
+            'services'    => $typeServices,
+            'img'         => $typeImage,
+            'tarif1'      => $typeTarif1,
+            'tarif2'      => $typeTarif2,
+            'tarif3'      => $typeTarif3,
         );
 
         // 2. Appel du modèle
-        $chambreObject = new Chambre();
-        $chambreObject->ajouterChambre( $params );
+        Type::ajouterType( $params );
 
         // 3. Redirection vers la liste des chambres
-        Header( 'Location: ' . SITE_DIR . 'admin/listechambres' );
+        Header( 'Location: ' . SITE_DIR . 'admin/listetypes' );
     }
 
-    $pageTitle = 'Ajouter une chambre';
-    require( 'views/admin/ajoutchambre.php' );
+    $pageTitle = 'Ajouter un type de chambre';
+    require( 'views/admin/ajouttype.php' );
 }
 
-function supprimechambreAction()
+function supprimetypeAction()
 {
     isLogged();
 
     $requestUri    = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
     $requestParams = explode( '/', $requestUri );
-    $chambreId     = isset( $requestParams[2] ) ? $requestParams[2] : null;
+    $typeId     = isset( $requestParams[2] ) ? $requestParams[2] : null;
 
-    $chambreObject = new Chambre();
-    $chambreObject->supprimerChambre( $chambreId );
+    Type::supprimerType( $typeId );
 
-    Header( 'Location: ' . SITE_DIR . 'admin/listechambres' );
+    Header( 'Location: ' . SITE_DIR . 'admin/listetypes' );
 }
