@@ -46,7 +46,7 @@
         <nav id="mainNav">
 			<ul>
 				<li><a href="<?php echo SITE_DIR;?>admin">Tableau de bord</a></li>
-				<li><a href="">R&eacute;servations</a></li>
+				<li><a href="<?php echo SITE_DIR;?>admin/listereservations">R&eacute;servations</a></li>
 				<li><a href="<?php echo SITE_DIR;?>admin/listetypes">Types de chambre</a></li>
 				<li><a href="">Clients</a></li>
 				<li><a href="<?php echo SITE_DIR;?>admin/loginadmin">Mon compte</a></li>

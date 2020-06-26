@@ -1,10 +1,10 @@
 <?php
-require('models/Bdd.php');
+require_once('models/Bdd.php');
 
 
 class Chambre
 {
-    public function getChambres()
+    public static function getChambres()
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
@@ -12,7 +12,7 @@ class Chambre
         return $result ? $result->fetchAll(PDO::FETCH_ASSOC) : null;
     }
 
-    public function getChambre($chambreId)
+    public static function getChambre($chambreId)
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
@@ -20,7 +20,7 @@ class Chambre
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
     }
 
-    public function getChambreByType($typeId)
+    public static function getChambreByType($typeId)
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
@@ -36,25 +36,25 @@ class Chambre
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
     } */
 
-    public function changeChambre($chambreId, $params)
+    public static function changeChambre($chambreId, $params)
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
-        $result = $connection->prepare("UPDATE chambre SET etat = :etat , chambre = :chambre , tarif1 = :tarif1 , tarif2 = :tarif2 , tarif3 = :tarif3 where id = $chambreId");
+        $result = $connection->prepare("UPDATE chambre SET etat = :etat , id_type = :type , info = :info where id = $chambreId");
         $result -> execute($params);
     }
 
-    public function ajouterChambre( $params )
+    public static function ajouterChambre( $params )
     {
         $bdd        = new Bdd();
         $connection = $bdd->getConnection();
 
         $result =
-            $connection->prepare( 'INSERT INTO chambre(etat, chambre, description, services, img, info, tarif1, tarif2, tarif3) VALUES(:etat, :chambre, :description, :services, :img, :info, :tarif1, :tarif2, :tarif3 )' );
+            $connection->prepare( 'INSERT INTO chambre(etat, id_type, info) VALUES(:etat, :type, :info)' );
         $result->execute( $params );
     }
 
-    public function supprimerChambre( $id )
+    public static function supprimerChambre( $id )
     {
         $bdd        = new Bdd();
         $connection = $bdd->getConnection();
