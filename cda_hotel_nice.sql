@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 26 juin 2020 à 10:02
+-- Généré le : ven. 26 juin 2020 à 10:11
 -- Version du serveur :  10.1.44-MariaDB-0ubuntu0.18.04.1
 -- Version de PHP : 7.4.7
 
@@ -66,6 +66,13 @@ CREATE TABLE `client` (
   `pts_fidelite` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `client`
+--
+
+INSERT INTO `client` (`id`, `name`, `email`, `hash_pass`, `add_postale`, `tel`, `c.id_passport`, `pts_fidelite`) VALUES
+(1, 'Bernard', 'bernard@mail.com', 'test', 'chez bernard', '02', '02', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -81,6 +88,13 @@ CREATE TABLE `reservation` (
   `date_fin` date NOT NULL,
   `termine` varchar(3) NOT NULL DEFAULT 'non'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `reservation`
+--
+
+INSERT INTO `reservation` (`id`, `id_client`, `id_chambre`, `date_debut`, `date_fin`, `termine`) VALUES
+(1, 1, 1, '2020-06-27', '2020-06-29', 'non');
 
 -- --------------------------------------------------------
 
@@ -184,13 +198,13 @@ ALTER TABLE `chambre`
 -- AUTO_INCREMENT pour la table `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `type`
