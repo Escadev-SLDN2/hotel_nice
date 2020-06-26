@@ -1,5 +1,5 @@
 <?php require('views/admin/templates/header.php');?> 
-<h1>Liste des chambres</h1>
+<h1>Liste des Réservations</h1>
 
 <div class="container">
 	<section class="row">
