@@ -56,4 +56,12 @@ class Reservation
             'id' => $id,
         ) );
     }
+
+    public static function end( $id ){
+        $bdd        = new Bdd();
+        $connection = $bdd->getConnection();
+
+        $statement  = $connection->prepare("UPDATE reservation SET termine = 'oui' WHERE id =$id");
+        $statement->execute();
+    }
 }

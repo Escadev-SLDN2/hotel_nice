@@ -156,6 +156,10 @@ function listereservationsAction()
 {
     isLogged();
 
+    $requestUri    = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
+    $requestParams = explode( '/', $requestUri );
+    isset( $requestParams[2] ) ? Reservation::end($requestParams[2]) : null;
+
     $clients = Client::getClients();
     $reservations = Reservation::getReservations();
 

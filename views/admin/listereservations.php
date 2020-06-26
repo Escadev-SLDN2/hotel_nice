@@ -24,9 +24,9 @@
 						<td><?php echo $clients[$reserv['id_client']-1]['name']; ?></td>
 						<td><?php echo $reserv['id_chambre']; ?></td>
 						<td><?php echo $reserv['date_debut']; ?></td>
-						<td><?php echo $reserv['date_fin']; ?>
+                        <td><?php echo $reserv['date_fin']; ?></td>
                         <td>
-                            <input type="checkbox" aria-labelledby="termine" id="<?php echo $reserv['id'] ?>" onclick="checkbox(this.id, this.checked)">
+                            <input type="checkbox" aria-labelledby="termine" id="<?php echo $reserv['id']; ?>" onclick="checkbox(this.id, this.checked)" checked="<?php echo $reserv['termine']=='oui'; ?>" autocomplete="text">
                         </td>
 						<td>
                             <a href="<?php echo SITE_DIR; ?>admin/editreservations/<?php echo $reserv['id']; ?>"><i class="fas fa-edit"></i></a>
@@ -47,7 +47,7 @@
 <script>
     function checkbox(checkboxId, isChecked) {
         if (isChecked){
-            console.log(checkboxId+" "+isChecked);
+            window.location.href = "<?php echo SITE_DIR; ?>admin/listereservations/"+checkboxId;
         }
 
     }
