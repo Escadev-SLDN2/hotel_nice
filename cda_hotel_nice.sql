@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 26 juin 2020 à 09:28
+-- Généré le : ven. 26 juin 2020 à 10:02
 -- Version du serveur :  10.1.44-MariaDB-0ubuntu0.18.04.1
 -- Version de PHP : 7.4.7
 
@@ -47,6 +47,40 @@ INSERT INTO `chambre` (`id`, `id_type`, `etat`, `info`) VALUES
 (2, 2, 'disponible', NULL),
 (3, 2, 'occupées', NULL),
 (4, 4, 'en construction', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `client`
+--
+
+DROP TABLE IF EXISTS `client`;
+CREATE TABLE `client` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `hash_pass` varchar(255) NOT NULL,
+  `add_postale` varchar(255) NOT NULL,
+  `tel` varchar(255) NOT NULL,
+  `c.id_passport` varchar(255) NOT NULL,
+  `pts_fidelite` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `reservation`
+--
+
+DROP TABLE IF EXISTS `reservation`;
+CREATE TABLE `reservation` (
+  `id` int(11) NOT NULL,
+  `id_client` int(11) NOT NULL,
+  `id_chambre` int(11) NOT NULL,
+  `date_debut` date NOT NULL,
+  `date_fin` date NOT NULL,
+  `termine` varchar(3) NOT NULL DEFAULT 'non'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -111,6 +145,20 @@ ALTER TABLE `chambre`
   ADD KEY `chambre` (`id_type`);
 
 --
+-- Index pour la table `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `reservation_chambre` (`id_chambre`),
+  ADD KEY `reservation_client` (`id_client`);
+
+--
 -- Index pour la table `type`
 --
 ALTER TABLE `type`
@@ -133,6 +181,18 @@ ALTER TABLE `chambre`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT pour la table `client`
+--
+ALTER TABLE `client`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `type`
 --
 ALTER TABLE `type`
@@ -153,6 +213,13 @@ ALTER TABLE `users`
 --
 ALTER TABLE `chambre`
   ADD CONSTRAINT `chambre` FOREIGN KEY (`id_type`) REFERENCES `type` (`id`);
+
+--
+-- Contraintes pour la table `reservation`
+--
+ALTER TABLE `reservation`
+  ADD CONSTRAINT `reservation_chambre` FOREIGN KEY (`id_chambre`) REFERENCES `chambre` (`id`),
+  ADD CONSTRAINT `reservation_client` FOREIGN KEY (`id_client`) REFERENCES `client` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
