@@ -26,7 +26,7 @@
 						<td><?php echo $reserv['date_debut']; ?></td>
                         <td><?php echo $reserv['date_fin']; ?></td>
                         <td>
-                            <input type="checkbox" aria-labelledby="termine" id="<?php echo $reserv['id']; ?>" onclick="checkbox(this.id, this.checked)" checked="<?php echo $reserv['termine']=='oui'; ?>" autocomplete="text">
+                            <input type="checkbox" aria-labelledby="termine" id="<?php echo $reserv['id']; ?>" onclick="checkbox(this.id, this.checked)" <?php echo $reserv['termine']=='oui'? 'checked':'' ; ?>>
                         </td>
 						<td>
                             <a href="<?php echo SITE_DIR; ?>admin/editreservations/<?php echo $reserv['id']; ?>"><i class="fas fa-edit"></i></a>
