@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le : ven. 26 juin 2020 à 17:04
--- Version du serveur :  10.1.44-MariaDB-0ubuntu0.18.04.1
--- Version de PHP : 7.4.7
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  mer. 01 juil. 2020 à 09:02
+-- Version du serveur :  10.4.10-MariaDB
+-- Version de PHP :  7.4.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `cda_hotel_nice`
+-- Base de données :  `cda_hotel_nice`
 --
 CREATE DATABASE IF NOT EXISTS `cda_hotel_nice` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `cda_hotel_nice`;
@@ -31,12 +31,14 @@ USE `cda_hotel_nice`;
 --
 
 DROP TABLE IF EXISTS `chambre`;
-CREATE TABLE `chambre` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `chambre` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_type` int(11) NOT NULL,
   `etat` varchar(255) NOT NULL,
-  `info` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `info` text DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `chambre` (`id_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `chambre`
@@ -55,16 +57,17 @@ INSERT INTO `chambre` (`id`, `id_type`, `etat`, `info`) VALUES
 --
 
 DROP TABLE IF EXISTS `client`;
-CREATE TABLE `client` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `client` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `hash_pass` varchar(255) NOT NULL,
   `add_postale` varchar(255) NOT NULL,
   `tel` varchar(255) NOT NULL,
   `c.id_passport` varchar(255) NOT NULL,
-  `pts_fidelite` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `pts_fidelite` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `client`
@@ -80,13 +83,14 @@ INSERT INTO `client` (`id`, `name`, `email`, `hash_pass`, `add_postale`, `tel`, 
 --
 
 DROP TABLE IF EXISTS `facture`;
-CREATE TABLE `facture` (
-  `id` int(11) NOT NULL,
-  `name_client` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `facture` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name_client` varchar(255) NOT NULL,
   `add_postale_client` varchar(255) NOT NULL,
   `tarif_type` decimal(8,2) NOT NULL,
   `nombre_de_nuits` int(11) NOT NULL,
-  `facture_totale` decimal(8,2) NOT NULL
+  `facture_totale` decimal(8,2) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -96,15 +100,18 @@ CREATE TABLE `facture` (
 --
 
 DROP TABLE IF EXISTS `reservation`;
-CREATE TABLE `reservation` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `reservation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_client` int(11) NOT NULL,
   `id_chambre` int(11) NOT NULL,
   `date_debut` date NOT NULL,
   `date_fin` date NOT NULL,
   `termine` varchar(3) NOT NULL DEFAULT 'non',
-  `nombre_de_nuits` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nombre_de_nuits` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `reservation_chambre` (`id_chambre`),
+  KEY `reservation_client` (`id_client`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `reservation`
@@ -120,16 +127,17 @@ INSERT INTO `reservation` (`id`, `id_client`, `id_chambre`, `date_debut`, `date_
 --
 
 DROP TABLE IF EXISTS `type`;
-CREATE TABLE `type` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) DEFAULT NULL,
-  `description` text,
+  `description` text DEFAULT NULL,
   `tarif1` decimal(6,2) NOT NULL,
   `tarif2` decimal(6,2) NOT NULL,
   `tarif3` decimal(6,2) NOT NULL,
   `services` varchar(255) DEFAULT NULL,
-  `img` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `img` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `type`
@@ -149,13 +157,14 @@ INSERT INTO `type` (`id`, `nom`, `description`, `tarif1`, `tarif2`, `tarif3`, `s
 --
 
 DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
   `hash_pass` varchar(255) NOT NULL,
-  `role` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `role` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `users`
@@ -163,89 +172,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `hash_pass`, `role`) VALUES
 (1, 'admin', 'admin@nice.com', 'test', 'ROLE_ADMIN');
-
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `chambre`
---
-ALTER TABLE `chambre`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `chambre` (`id_type`);
-
---
--- Index pour la table `client`
---
-ALTER TABLE `client`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `facture`
---
-ALTER TABLE `facture`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `reservation`
---
-ALTER TABLE `reservation`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `reservation_chambre` (`id_chambre`),
-  ADD KEY `reservation_client` (`id_client`);
-
---
--- Index pour la table `type`
---
-ALTER TABLE `type`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `chambre`
---
-ALTER TABLE `chambre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT pour la table `client`
---
-ALTER TABLE `client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `facture`
---
-ALTER TABLE `facture`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT pour la table `reservation`
---
-ALTER TABLE `reservation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT pour la table `type`
---
-ALTER TABLE `type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT pour la table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Contraintes pour les tables déchargées
