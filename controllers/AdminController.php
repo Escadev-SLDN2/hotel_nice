@@ -167,6 +167,6 @@ function affichefactureAction(){
     $factureId      = isset( $requestParams[2] ) ? $requestParams[2] : null;
     $facture        = Facture::getFacture($factureId);
 
-    $pageTitle = 'Facture n°'.$facture['id'].' - '.$facture['name_client'];
+    $pageTitle = 'Facture n°'.$facture['id'];
     require( 'views/admin/affichefacture.php' );
 }

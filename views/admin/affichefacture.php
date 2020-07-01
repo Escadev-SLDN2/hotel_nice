@@ -32,38 +32,40 @@
 </head>
 <body>
 <header>
-    <a href="<?php echo SITE_DIR . 'admin'; ?>"><img src="<?php echo SITE_DIR;?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
-    <span class="title"><a href="<?php echo SITE_DIR;?>">CDA Hotel Nice</a></span>
-    <div class="addresse">
-        <p>CDA Hotel Nice</p>
-        <p>69 Prom. des Anglais, 06200 Nice</p>
-        <p><?php echo date('d M Y') ?></p>
-    </div>
-
+        <a href="<?php echo SITE_DIR . 'admin'; ?>"><img src="<?php echo SITE_DIR;?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
+        <span class="title"><a href="<?php echo SITE_DIR;?>">CDA Hotel Nice</a></span>
 </header>
 
 <main>
     <h1><?php echo $pageTitle; ?></h1>
+    <div class="container">
+        <div class="row">
+            <div class="block-content large-block centered color-sky">
+                <p class="date">À Nice le <?php echo date('d M Y') ?> :</p>
+                <div class="addresse">
+                    <p><?php echo $facture['name_client']; ?></p>
+                    <p><?php echo $facture['add_postale_client']; ?></p>
 
-    <div class="row">
-        <div class="block-content large-block color-sky">
-            <table>
-                <thead>
+                </div>
+                <table>
+                    <thead>
                     <tr>
                         <th>Produit ou Service</th>
                         <th>Prix / unité</th>
                         <th>Quantitée</th>
                         <th>Total (TTC)</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     <tr>
                         <td>Nuit à l'Hôtel CDA Nice</td>
                         <td><?php echo $facture['tarif_type']; ?>€</td>
                         <td><?php echo $facture['nombre_de_nuits']; ?></td>
                         <td><?php echo $facture['facture_totale']; ?></td>
                     </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+
