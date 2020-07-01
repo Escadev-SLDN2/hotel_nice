@@ -1,0 +1,30 @@
+@import "variables/fonts";
+@import "variables/colors";
+@import "helpers/mixins";
+
+@import "header";
+@import "content";
+@import "layout";
+@import "table";
+body {
+    &>header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        .addresse{
+            margin-left: auto;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            p{
+                margin: 0;
+            }
+        }
+    }
+
+    main{
+      	margin-top: 110px;
+    }
+}
