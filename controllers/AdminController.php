@@ -170,3 +170,13 @@ function affichefactureAction(){
     $pageTitle = 'Facture n°'.$facture['id'];
     require( 'views/admin/affichefacture.php' );
 }
+
+function listefacturesAction(){
+    isLogged();
+
+    $pageTitle = 'Liste des factures';
+    $factures = Facture::getFactures();
+    $clients = Client::getClients();
+
+    require ( 'views/admin/listefactures.php' );
+}
