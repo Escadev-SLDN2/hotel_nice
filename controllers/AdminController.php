@@ -2,10 +2,10 @@
 require( 'models/Type.php' );
 require( 'models/Client.php' );
 require( 'models/Reservation.php' );
+require( 'models/Facture.php');
 require_once( 'models/Login.php' );
 
-function isLogged()
-{
+function isLogged(){
     // On vérifie si un cookie significatif existe
     if( ! isset( $_COOKIE['isLogged'] ) ) {
         // Si non, on redirige vers le formulaire de login
@@ -13,16 +13,14 @@ function isLogged()
     }
 }
 
-function indexAction()
-{
+function indexAction(){
     isLogged();
 
     $pageTitle = 'Administration';
     require( 'views/admin/index.php' );
 }
 
-function loginadminAction()
-{
+function loginadminAction(){
     if( isset( $_POST['adminconnect'] ) ) {
         $login    = $_POST['txt_mail'];
         $password = $_POST['txt_pass'];
@@ -47,8 +45,7 @@ function loginadminAction()
     require_once( 'views/admin/loginadmin.php' );
 }
 
-function logoutAction()
-{
+function logoutAction(){
     // 1. Détruire la session
     setcookie( 'isLogged', true, time() + 0 );
 
@@ -56,8 +53,7 @@ function logoutAction()
     Header( 'Location: ' . SITE_DIR . 'admin/loginadmin' );
 }
 
-function listetypesAction()
-{
+function listetypesAction(){
     isLogged();
 
     $types      = Type::getTypes();
@@ -66,8 +62,7 @@ function listetypesAction()
     require( 'views/admin/listetypes.php' );
 }
 
-function edittypeAction()
-{
+function edittypeAction(){
     isLogged();
 
     $requestUri    = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
@@ -104,8 +99,7 @@ function edittypeAction()
     require( 'views/admin/edittype.php' );
 }
 
-function ajouttypeAction()
-{
+function ajouttypeAction(){
     isLogged();
 
     if( isset( $_POST['ajouttype'] ) ) {
@@ -139,8 +133,7 @@ function ajouttypeAction()
     require( 'views/admin/ajouttype.php' );
 }
 
-function supprimetypeAction()
-{
+function supprimetypeAction(){
     isLogged();
 
     $requestUri    = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
@@ -152,8 +145,7 @@ function supprimetypeAction()
     Header( 'Location: ' . SITE_DIR . 'admin/listetypes' );
 }
 
-function listereservationsAction()
-{
+function listereservationsAction(){
     isLogged();
 
     $requestUri    = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
@@ -165,4 +157,26 @@ function listereservationsAction()
 
     $pageTitle = 'Gérer les réservations';
     require( 'views/admin/listereservations.php' );
+}
+
+function affichefactureAction(){
+    isLogged();
+
+    $requestUri     = str_replace( SITE_DIR, '', $_SERVER['REQUEST_URI'] );
+    $requestParams  = explode( '/', $requestUri );
+    $factureId      = isset( $requestParams[2] ) ? $requestParams[2] : null;
+    $facture        = Facture::getFacture($factureId);
+
+    $pageTitle = 'Facture n°'.$facture['id'];
+    require( 'views/admin/affichefacture.php' );
+}
+
+function listefacturesAction(){
+    isLogged();
+
+    $pageTitle = 'Liste des factures';
+    $factures = Facture::getFactures();
+    $clients = Client::getClients();
+
+    require ( 'views/admin/listefactures.php' );
 }

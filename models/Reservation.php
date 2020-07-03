@@ -20,7 +20,7 @@ class Reservation
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
     }
 
-    public static function getReservationByClient($clientId)
+    public static function getReservationsByClient($clientId)
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
