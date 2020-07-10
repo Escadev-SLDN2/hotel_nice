@@ -1,5 +1,7 @@
 <?php
 require( 'models/Type.php' );
+require( 'models/Client.php' );
+require( 'models/Reservation.php' );
 require_once( 'models/Login.php' );
 
 function isLogged()
@@ -148,4 +150,15 @@ function supprimetypeAction()
     Type::supprimerType( $typeId );
 
     Header( 'Location: ' . SITE_DIR . 'admin/listetypes' );
+}
+
+function listereservationsAction()
+{
+    isLogged();
+
+    $clients = Client::getClients();
+    $reservations = Reservation::getReservations();
+
+    $pageTitle = 'Gérer les réservations';
+    require( 'views/admin/listereservations.php' );
 }
