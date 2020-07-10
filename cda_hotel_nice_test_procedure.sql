@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : ven. 10 juil. 2020 à 16:07
+-- Généré le : ven. 10 juil. 2020 à 16:22
 -- Version du serveur :  10.1.44-MariaDB-0ubuntu0.18.04.1
 -- Version de PHP : 7.4.7
 
@@ -111,11 +111,11 @@ INSERT INTO `client` (`id`, `name`, `email`, `hash_pass`, `add_postale`, `tel`, 
 DROP TABLE IF EXISTS `facture`;
 CREATE TABLE `facture` (
   `id` int(11) NOT NULL,
-  `name_client` varchar(255) DEFAULT NULL,
-  `add_postale_client` varchar(255) DEFAULT NULL,
-  `tarif_type` decimal(8,2) DEFAULT NULL,
-  `nombre_de_nuits` int(11) DEFAULT NULL,
-  `facture_totale` decimal(8,2) DEFAULT NULL
+  `name_client` varchar(255) NOT NULL,
+  `add_postale_client` varchar(255) NOT NULL,
+  `tarif_type` decimal(8,2) NOT NULL,
+  `nombre_de_nuits` int(11) NOT NULL,
+  `facture_totale` decimal(8,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
