@@ -5,3 +5,4 @@ config/bdd.php
 .codelite
 *.code-workspace
 assets/css
+.htaccess
