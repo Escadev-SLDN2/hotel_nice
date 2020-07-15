@@ -1,12 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.9.2
--- https://www.phpmyadmin.net/
---
--- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 01 juil. 2020 à 09:02
--- Version du serveur :  10.4.10-MariaDB
--- Version de PHP :  7.4.0
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -26,11 +17,18 @@ USE `cda_hotel_nice`;
 
 -- --------------------------------------------------------
 
+
+DROP TABLE IF EXISTS `facture`;
+DROP TABLE IF EXISTS `reservation`;
+DROP TABLE IF EXISTS `chambre`;
+DROP TABLE IF EXISTS `type`;
+DROP TABLE IF EXISTS `client`;
+DROP TABLE IF EXISTS `users`;
+
 --
 -- Structure de la table `chambre`
 --
 
-DROP TABLE IF EXISTS `chambre`;
 CREATE TABLE IF NOT EXISTS `chambre` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_type` int(11) NOT NULL,
@@ -56,7 +54,6 @@ INSERT INTO `chambre` (`id`, `id_type`, `etat`, `info`) VALUES
 -- Structure de la table `client`
 --
 
-DROP TABLE IF EXISTS `client`;
 CREATE TABLE IF NOT EXISTS `client` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -82,7 +79,6 @@ INSERT INTO `client` (`id`, `name`, `email`, `hash_pass`, `add_postale`, `tel`, 
 -- Structure de la table `facture`
 --
 
-DROP TABLE IF EXISTS `facture`;
 CREATE TABLE IF NOT EXISTS `facture` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name_client` varchar(255) NOT NULL,
@@ -99,7 +95,6 @@ CREATE TABLE IF NOT EXISTS `facture` (
 -- Structure de la table `reservation`
 --
 
-DROP TABLE IF EXISTS `reservation`;
 CREATE TABLE IF NOT EXISTS `reservation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_client` int(11) NOT NULL,
@@ -126,7 +121,6 @@ INSERT INTO `reservation` (`id`, `id_client`, `id_chambre`, `date_debut`, `date_
 -- Structure de la table `type`
 --
 
-DROP TABLE IF EXISTS `type`;
 CREATE TABLE IF NOT EXISTS `type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) DEFAULT NULL,
@@ -156,7 +150,6 @@ INSERT INTO `type` (`id`, `nom`, `description`, `tarif1`, `tarif2`, `tarif3`, `s
 -- Structure de la table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,

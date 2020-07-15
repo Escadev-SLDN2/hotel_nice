@@ -20,7 +20,7 @@ class Reservation
         return $result ? $result->fetch(PDO::FETCH_ASSOC) : null;
     }
 
-    public static function getReservationByClient($clientId)
+    public static function getReservationsByClient($clientId)
     {
         $bdd = new Bdd();
         $connection = $bdd->getConnection();
@@ -55,5 +55,13 @@ class Reservation
         $result->execute( array(
             'id' => $id,
         ) );
+    }
+
+    public static function end( $id ){
+        $bdd        = new Bdd();
+        $connection = $bdd->getConnection();
+
+        $statement  = $connection->prepare("UPDATE reservation SET termine = 'oui' WHERE id =$id");
+        $statement->execute();
     }
 }
