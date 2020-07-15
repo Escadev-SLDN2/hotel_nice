@@ -10,6 +10,8 @@
         flex-direction: row-reverse;
     }
 
+    
+
     .block-content {
         border-radius: 0.8vw;
         min-height: 10vh;
@@ -168,6 +170,19 @@
 		
     }
     
+}
+
+.small-margin-left{
+    margin-left: 7em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.space-between{
+    margin-left: 7em;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2em;
 }
 
 .container{

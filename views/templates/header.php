@@ -59,7 +59,7 @@
 			</a>
             <div class="etat-reserv">
                 <p>
-                    <a href="<?php echo SITE_DIR;?>reservation/"class="button" type="button" id="btnReserv">Réserver</a>
+                    <a href="<?php echo SITE_DIR;?>reservation/"class="button button_o" type="button" id="btnReserv">Réserver</a>
                 </p>
             </div>
             <p>FR / <a href="<?php echo SITE_DIR;?>en">EN</a></p>
