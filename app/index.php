@@ -2,11 +2,7 @@
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-define('SITE_DIR','/hotel_nice/');
-
-$requestUri = str_replace(SITE_DIR, '', $_SERVER['REQUEST_URI']);
-
-$requestParams = explode('/', $requestUri);
+$requestParams = explode('/', $_SERVER['REQUEST_URI']);
 
 $controller = (!empty($requestParams[0]) ? ucfirst($requestParams[0])  : 'Accueil'). 'Controller';
 $action = (!empty($requestParams[1]) ? $requestParams[1] : 'index'). 'Action';

@@ -15,16 +15,16 @@
     />
 
     <!-- Ici se trouvent les liens vers les fichiers favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo SITE_DIR;?>apple-touch-icon.png"/>
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo SITE_DIR;?>favicon-32x32.png"/>
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo SITE_DIR;?>favicon-16x16.png"/>
-	<link rel="manifest" href="<?php echo SITE_DIR;?>site.webmanifest"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+	<link rel="manifest" href="/site.webmanifest"/>
 	<meta name="msapplication-TileColor" content="#da532c"/>
 	<meta name="theme-color" content="#ffffff"/>
 
 	<!-- Ici se trouvent les liens vers les feuilles de styles -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"/>
-	<link rel="stylesheet" href="<?php echo SITE_DIR;?>assets/css/managment.min.css" />
+	<link rel="stylesheet" href="/assets/css/managment.min.css" />
 
 	<!-- Script Javascript -->
 	<script src="https://kit.fontawesome.com/86d37fbec9.js" crossorigin="anonymous"></script>
@@ -41,16 +41,16 @@
 </head>
 <body>
     <header>
-        <a href="<?php echo SITE_DIR . 'admin'; ?>"><img src="<?php echo SITE_DIR;?>assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
+        <a href="<?php echo SITE_DIR . 'admin'; ?>"><img src="/assets/img/logonice_mini2.png" height="90px" alt="CDANICE"/></a>
         <span class="title"><a href="<?php echo SITE_DIR . 'admin'; ?>">Administration</a></span>
         <nav id="mainNav">
 			<ul>
-				<li><a href="<?php echo SITE_DIR;?>admin">Tableau de bord</a></li>
-				<li><a href="<?php echo SITE_DIR;?>admin/listereservations">R&eacute;servations</a></li>
-				<li><a href="<?php echo SITE_DIR;?>admin/listefactures">Factures</a></li>
-				<li><a href="<?php echo SITE_DIR;?>admin/listetypes">Types de chambre</a></li>
+				<li><a href="/admin">Tableau de bord</a></li>
+				<li><a href="/admin/listereservations">R&eacute;servations</a></li>
+				<li><a href="/admin/listefactures">Factures</a></li>
+				<li><a href="/admin/listetypes">Types de chambre</a></li>
 				<li><a href="">Clients</a></li>
-				<li><a href="<?php echo SITE_DIR;?>admin/loginadmin">Mon compte</a></li>
+				<li><a href="/admin/loginadmin">Mon compte</a></li>
 				<?php if( isset($_COOKIE['isLogged']) ) : ?>
                         <li><a class="bouton" href="<?php echo SITE_DIR; ?>admin/logout"><i class="fas fa-user-times"></i></a></li>
                     <?php endif; ?>

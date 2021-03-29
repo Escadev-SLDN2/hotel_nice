@@ -51,6 +51,6 @@
         </div>
 
         <!-- Script Javascript -->
-        <script src="<?php echo SITE_DIR;?>assets/js/modal.js"></script>
+        <script src="/assets/js/modal.js"></script>
     </body>
 </html>
