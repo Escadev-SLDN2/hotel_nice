@@ -6,13 +6,13 @@
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
                             <li class="glide__slide">
-                                <img src="<?php echo SITE_DIR;?>assets/img/hotel.jpg" width="100%" />
+                                <img src="/assets/img/hotel.jpg" width="100%" />
                             </li>
                             <li class="glide__slide">
-                                <img src="<?php echo SITE_DIR;?>assets/img/resort.jpg" width="100%" />
+                                <img src="/assets/img/resort.jpg" width="100%" />
                             </li>
                             <li class="glide__slide">
-                                <img src="<?php echo SITE_DIR;?>assets/img/breakfast.jpg" width="100%" />
+                                <img src="/assets/img/breakfast.jpg" width="100%" />
                             </li>
                         </ul>
                     </div>
@@ -42,7 +42,7 @@
                     </p>
                 </div>
                 <div class="block-content medium-block">
-                    <img src="<?php echo SITE_DIR;?>assets/img/facade.jpg" alt="facade de l'hotel"/>
+                    <img src="/assets/img/facade.jpg" alt="facade de l'hotel"/>
                 </div>
             </section>
 
@@ -79,7 +79,7 @@
                     </ul>
                 </div>
                 <div class="block-content medium-block">
-                    <img src="<?php echo SITE_DIR;?>assets/img/promenade.jpg" alt="promenade de nice"/>
+                    <img src="/assets/img/promenade.jpg" alt="promenade de nice"/>
                 </div>
             </section>
 
